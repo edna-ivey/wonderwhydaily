@@ -19,19 +19,20 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
         <div className="shell wonder-hero-grid">
           <div className="wonder-hero-copy">
             <div className="eyebrow-row light">
-              <Link
-                className="category-pill"
-                href={`/category/${categorySlug(wonder.category)}`}
-              >
-                {wonder.category}
-              </Link>
+              <span className="wonder-classification">
+                <Link href={`/category/${categorySlug(wonder.category)}`}>
+                  {wonder.category}
+                </Link>
+                <span aria-hidden="true">•</span>
+                <span>{wonder.rating}</span>
+              </span>
               <time dateTime={wonder.date}>{formatWonderDate(wonder.date)}</time>
             </div>
             <p className="hero-kicker">Today&apos;s Wonder</p>
             <h1>{wonder.title}</h1>
             <p className="hero-excerpt">{wonder.excerpt}</p>
           </div>
-          <WonderArt accent={wonder.accent} />
+          <WonderArt accent={wonder.accent} category={wonder.category} />
         </div>
       </section>
 

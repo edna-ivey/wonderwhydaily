@@ -3,6 +3,20 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const wondersDirectory = path.join(process.cwd(), "content/wonders");
+const earliestPublicationDate = "2026-05-28";
+const minimumExplanationWords = 150;
+const maximumExplanationWords = 320;
+const rejectedEditorialPhrases = [
+  "Researchers compare",
+  "A careful observer would",
+  "Scientists strengthen the model",
+  "Studies become more convincing",
+  "A useful explanation follows the information",
+  "Historians weigh",
+  "A strong explanation predicts",
+  "The concise answer is this",
+  "That extra detail is not merely",
+];
 
 export const categoryDefinitions = [
   {
@@ -57,6 +71,15 @@ export const categoryDefinitions = [
 
 export type CategoryName = (typeof categoryDefinitions)[number]["name"];
 
+export const wonderRatings = [
+  "⭐ Everyday Wonder",
+  "⭐⭐ Curious Wonder",
+  "⭐⭐⭐ Mind-Blowing Wonder",
+  "⭐⭐⭐⭐ Reality-Bending Wonder",
+] as const;
+
+export type WonderRating = (typeof wonderRatings)[number];
+
 export type WonderChannels = {
   email: {
     subject: string;
@@ -78,6 +101,7 @@ export type Wonder = {
   title: string;
   date: string;
   category: CategoryName;
+  rating: WonderRating;
   excerpt: string;
   shortAnswer: string;
   choices: string[];
@@ -124,10 +148,17 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
   const category = assertString(data.category, "category", filename);
   const categoryDefinition = categoryDefinitions.find((item) => item.name === category);
   const date = assertString(data.date, "date", filename);
+  const rating = assertString(data.rating, "rating", filename);
 
   if (!categoryDefinition) {
     throw new Error(
       `${filename}: "${category}" is not a permanent Wonder Why Daily category.`,
+    );
+  }
+
+  if (!wonderRatings.includes(rating as WonderRating)) {
+    throw new Error(
+      `${filename}: "${rating}" is not an approved Wonder rating.`,
     );
   }
 
@@ -142,6 +173,16 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
     throw new Error(`${filename}: "date" must use YYYY-MM-DD format.`);
   }
 
+  if (date < earliestPublicationDate) {
+    throw new Error(
+      `${filename}: "date" cannot be earlier than ${earliestPublicationDate}.`,
+    );
+  }
+
+  if (choices.length !== 3 || new Set(choices).size !== 3) {
+    throw new Error(`${filename}: "choices" must contain exactly three unique answers.`);
+  }
+
   const channels = data.channels as Record<string, unknown> | undefined;
   const email = channels?.email as Record<string, unknown> | undefined;
   const social = channels?.social as Record<string, unknown> | undefined;
@@ -154,6 +195,7 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
     title: assertString(data.title, "title", filename),
     date,
     category: categoryDefinition.name,
+    rating: rating as WonderRating,
     excerpt: assertString(data.excerpt, "excerpt", filename),
     shortAnswer: assertString(data.shortAnswer, "shortAnswer", filename),
     choices,
@@ -216,6 +258,38 @@ function readWonder(filename: string): Wonder {
   const slug = filename.replace(/\.mdx$/, "");
   const source = fs.readFileSync(path.join(wondersDirectory, filename), "utf8");
   const { data, content } = matter(source);
+  const explanationWords = content
+    .replace(/^#{1,6}\s+/gm, "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
+  const explanationHeadings = [...content.matchAll(/^#{1,6}\s+(.+)$/gm)].map(
+    ([, heading]) => heading.trim(),
+  );
+
+  if (explanationWords < minimumExplanationWords) {
+    throw new Error(
+      `${filename}: explanation must contain at least ${minimumExplanationWords} words; found ${explanationWords}.`,
+    );
+  }
+
+  if (explanationWords > maximumExplanationWords) {
+    throw new Error(
+      `${filename}: explanation must contain no more than ${maximumExplanationWords} words; found ${explanationWords}.`,
+    );
+  }
+
+  if (explanationHeadings.length > 0) {
+    throw new Error(
+      `${filename}: explanation must be one conversational narrative without headings.`,
+    );
+  }
+
+  for (const phrase of rejectedEditorialPhrases) {
+    if (content.includes(phrase)) {
+      throw new Error(`${filename}: replace formal or generic phrase "${phrase}".`);
+    }
+  }
 
   return {
     slug,
@@ -224,7 +298,31 @@ function readWonder(filename: string): Wonder {
   };
 }
 
-export function getAllWonders(): Wonder[] {
+function getEditorialTimeZone(): string {
+  return (
+    process.env.WONDER_TIME_ZONE ??
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
+}
+
+export function getEditorialDate(now = new Date()): string {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: getEditorialTimeZone(),
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(now);
+  const value = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find((part) => part.type === type)?.value;
+
+  return `${value("year")}-${value("month")}-${value("day")}`;
+}
+
+export function isWonderPublished(wonder: Wonder, today = getEditorialDate()): boolean {
+  return wonder.date <= today;
+}
+
+export function getAllScheduledWonders(): Wonder[] {
   const wonders = fs
     .readdirSync(wondersDirectory)
     .filter((filename) => filename.endsWith(".mdx"))
@@ -252,15 +350,25 @@ export function getAllWonders(): Wonder[] {
   return wonders;
 }
 
+export function getAllWonders(): Wonder[] {
+  return getAllScheduledWonders().filter((wonder) => isWonderPublished(wonder));
+}
+
 export function getWonder(slug: string): Wonder | undefined {
   return getAllWonders().find((wonder) => wonder.slug === slug);
 }
 
 export function getTodaysWonder(): Wonder {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getEditorialDate();
   const wonders = getAllWonders();
 
-  return wonders.find((wonder) => wonder.date === today) ?? wonders[0];
+  const wonder = wonders.find((item) => item.date === today) ?? wonders[0];
+
+  if (!wonder) {
+    throw new Error(`No Wonder is published on or before ${today}.`);
+  }
+
+  return wonder;
 }
 
 export function getCategories() {

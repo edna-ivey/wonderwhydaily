@@ -12,16 +12,21 @@ export function WonderCard({
   return (
     <article className={`wonder-card wonder-card-${variant}`}>
       <Link href={`/wonders/${wonder.slug}`} className="card-art-link" tabIndex={-1}>
-        <WonderArt accent={wonder.accent} compact={variant === "standard"} />
+        <WonderArt
+          accent={wonder.accent}
+          category={wonder.category}
+          compact={variant === "standard"}
+        />
       </Link>
       <div className="card-body">
         <div className="eyebrow-row">
-          <Link
-            className="category-pill"
-            href={`/category/${categorySlug(wonder.category)}`}
-          >
-            {wonder.category}
-          </Link>
+          <span className="wonder-classification">
+            <Link href={`/category/${categorySlug(wonder.category)}`}>
+              {wonder.category}
+            </Link>
+            <span aria-hidden="true">•</span>
+            <span>{wonder.rating}</span>
+          </span>
           <time dateTime={wonder.date}>{formatWonderDate(wonder.date)}</time>
         </div>
         <h2>

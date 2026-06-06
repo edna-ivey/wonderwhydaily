@@ -32,7 +32,7 @@ export default function Home() {
               Find out why <span aria-hidden="true">-&gt;</span>
             </Link>
           </div>
-          <WonderArt accent={today.accent} />
+          <WonderArt accent={today.accent} category={today.category} />
         </div>
         <div className="hero-marquee" aria-hidden="true">
           <span>Pause. Guess. Discover.</span>

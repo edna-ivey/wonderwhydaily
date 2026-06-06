@@ -1,6 +1,6 @@
 # Wonder Why Daily: Content Model
 
-**Status:** Milestone 1.1 local MDX contract  
+**Status:** Milestone 1.5 local MDX contract
 **Purpose:** Keep each Wonder useful across the website and future distribution channels without coupling content to a delivery provider.
 
 ## Permanent Categories
@@ -23,7 +23,7 @@ yet. A Wonder must use exactly one permanent category.
 ## Wonder Contract
 
 Every file in `content/wonders` is an MDX document with validated frontmatter
-and a long-form explanation body.
+and a conversational explanation body.
 
 ### Core identity and discovery
 
@@ -32,6 +32,7 @@ and a long-form explanation body.
 | `title` | Public question and primary headline |
 | `date` | Daily edition date in `YYYY-MM-DD` format |
 | `category` | One permanent curiosity category |
+| `rating` | One permanent Wonder Rating |
 | `excerpt` | Short curiosity-building summary for cards and SEO |
 | `accent` | Visual treatment key |
 | `related` | Stable slugs for intentional Related Wonders |
@@ -50,7 +51,7 @@ and a long-form explanation body.
 
 | Field | Purpose |
 |---|---|
-| MDX body | Structured explanation with readable sections |
+| MDX body | One flowing, conversational explanation narrative |
 | `takeaway` | One memorable summary suitable for recaps and scripts |
 | `coolFact` | A surprising supporting fact |
 | `tryItYourself` | Safe observation or activity that connects learning to life |
@@ -82,16 +83,45 @@ publication status.
 The local content loader fails the build when:
 
 - A required field is missing or empty.
+- A publication date is earlier than May 28, 2026.
 - A category is outside the permanent taxonomy.
+- A rating is outside the four permanent Wonder Ratings.
+- A quiz does not contain exactly three unique choices.
 - The correct answer does not match a quiz choice.
 - Quiz choices or related slugs are malformed.
 - A Related Wonder slug does not exist.
 - More than one Wonder uses the same edition date.
 - The future-ready channel block is missing.
 - A carousel has fewer than three ordered beats.
+- An explanation falls outside 150-320 words.
+- An explanation contains any heading or subsection.
 
 Related slugs are validated as a hard build failure so intentional exploration
 paths cannot quietly break.
+
+## Permanent Wonder Ratings
+
+Ratings describe how surprising the experience feels. They are brand language,
+not difficulty levels:
+
+- `⭐ Everyday Wonder`
+- `⭐⭐ Curious Wonder`
+- `⭐⭐⭐ Mind-Blowing Wonder`
+- `⭐⭐⭐⭐ Reality-Bending Wonder`
+
+## Editorial Calendar
+
+- The public launch remains June 1, 2026.
+- Three preview Wonders are published May 28 through May 30.
+- Existing launch Wonders occupy June 1 through June 5.
+- New Wonders continue forward one edition per day.
+- Categories should be mixed across the calendar rather than published in blocks.
+- Today's edition uses `WONDER_TIME_ZONE` when configured and otherwise uses
+  the build environment's local timezone.
+- Collection helpers expose only Wonders whose date is on or before today's
+  editorial date, sorted newest first.
+- Future Wonders may be statically prebuilt, but direct routes return
+  `notFound()` until their publication date.
 
 ## Channel Readiness Review
 
@@ -103,12 +133,24 @@ The schema can support the requested future surfaces:
 - **Pinterest:** dedicated title and description plus the Wonder's visual treatment
 - **AI-assisted social automation:** structured, human-approved source fields that can be transformed without scraping prose
 
-Those systems remain deliberately unimplemented in Milestone 1.1.
+Those systems remain deliberately unimplemented in Milestone 1.5.
 
 ## Editorial Guidance
 
 - Write guesses that sound reasonable; avoid trick answers.
+- Give every quiz exactly three plausible choices that reward careful thinking.
 - Feedback should reward thinking, not test performance.
+- Write one flowing explanation narrative, usually 180-280 words and always
+  within 150-320 words.
+- Open with a hook, use a vivid mental image or analogy, answer the question,
+  and end with a satisfying payoff.
+- Include at least one sentence that remains fascinating even when the reader
+  already knows the basic answer.
+- Keep Cool Fact independent from the explanation.
+- Keep Try It Yourself action-focused rather than explanatory.
+- Prefer short, lively paragraphs that are easy to read aloud.
+- Use vivid comparisons and direct language without sounding childish.
+- Avoid academic framing, generic editorial filler, and repeated formal prose.
 - The question, explanation, and takeaway remain the canonical truth.
 - Channel copy may adapt the idea but must not introduce unsupported claims.
 - Human review remains required before any future automated publication.
