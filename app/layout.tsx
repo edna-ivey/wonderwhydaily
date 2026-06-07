@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -32,6 +33,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <Analytics />
+        <GoogleAnalytics gaId="G-PB2BML783E" />
       </body>
     </html>
   );
