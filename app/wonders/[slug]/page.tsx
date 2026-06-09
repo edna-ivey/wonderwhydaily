@@ -26,8 +26,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: wonder.title,
       description: wonder.excerpt,
+      siteName: "Wonder Why Daily",
       type: "article",
       publishedTime: wonder.date,
+      section: wonder.category,
+      tags: [wonder.category, "curiosity", "daily wonder"],
+      url: `/wonders/${wonder.slug}`,
+      images: [
+        {
+          alt: wonder.title,
+          height: 630,
+          url: `/wonders/${wonder.slug}/opengraph-image`,
+          width: 1200,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: wonder.title,
+      description: wonder.excerpt,
+      images: [`/wonders/${wonder.slug}/opengraph-image`],
     },
   };
 }
@@ -38,5 +56,31 @@ export default async function WonderPage({ params }: Props) {
 
   if (!wonder) notFound();
 
-  return <WonderDetail wonder={wonder} />;
+  const wonderUrl = `https://wonderwhydaily.com/wonders/${wonder.slug}`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    datePublished: wonder.date,
+    description: wonder.excerpt,
+    headline: wonder.title,
+    image: `${wonderUrl}/opengraph-image`,
+    mainEntityOfPage: wonderUrl,
+    publisher: {
+      "@type": "Organization",
+      name: "Wonder Why Daily",
+      url: "https://wonderwhydaily.com",
+    },
+  };
+
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+        type="application/ld+json"
+      />
+      <WonderDetail wonder={wonder} />
+    </>
+  );
 }

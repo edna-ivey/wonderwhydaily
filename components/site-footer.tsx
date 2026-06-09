@@ -1,6 +1,11 @@
+import { EmailSignup } from "@/components/email-signup";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
+      <div className="shell footer-signup">
+        <EmailSignup compact />
+      </div>
       <div className="shell footer-projects" aria-labelledby="footer-projects-heading">
         <p className="footer-projects-title" id="footer-projects-heading">
           Explore More Projects

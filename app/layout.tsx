@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ReadingStreak } from "@/components/reading-streak";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { getEditorialDate } from "@/lib/wonders";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,10 +28,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const editorialDate = getEditorialDate();
+
   return (
     <html lang="en">
       <body>
         <SiteHeader />
+        <ReadingStreak editorialDate={editorialDate} trackOnly />
         {children}
         <SiteFooter />
         <Analytics />
