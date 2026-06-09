@@ -38,6 +38,17 @@ button {
   font: inherit;
 }
 
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .shell,
 .wide-shell,
 .reading-shell {
@@ -582,6 +593,112 @@ button {
   padding-bottom: 120px;
 }
 
+.growth-foundation {
+  display: grid;
+  gap: 28px;
+  padding-bottom: 120px;
+}
+
+.email-signup,
+.reading-streak {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: clamp(26px, 5vw, 48px);
+}
+
+.email-signup h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5vw, 3.8rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 0;
+  max-width: 740px;
+}
+
+.email-signup-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.email-signup-form input[type="email"] {
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  color: var(--ink);
+  flex: 1 1 240px;
+  font: inherit;
+  min-height: 50px;
+  padding: 0 16px;
+}
+
+.email-signup-form input[type="email"]:focus-visible,
+.share-links a:focus-visible,
+.share-links button:focus-visible,
+.archive-filters a:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.email-honeypot {
+  left: -9999px;
+  position: absolute;
+}
+
+.email-signup-status {
+  color: rgba(23, 34, 28, 0.7);
+  font-size: 11px;
+  min-height: 18px;
+}
+
+.email-signup-status-error {
+  color: #9e3519;
+}
+
+.reading-streak {
+  align-items: end;
+  display: grid;
+  gap: 32px;
+}
+
+.reading-streak-note {
+  color: rgba(23, 34, 28, 0.68);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.45;
+  margin: 12px 0 0;
+  max-width: 430px;
+}
+
+.reading-streak dl {
+  border-top: 1px solid var(--line);
+  display: grid;
+  margin: 0;
+}
+
+.reading-streak dl div {
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  padding-block: 14px;
+}
+
+.reading-streak dt {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.reading-streak dd {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0;
+}
+
 .section-heading {
   align-items: end;
   display: flex;
@@ -799,6 +916,34 @@ button {
 
 .category-results {
   padding-top: 84px;
+}
+
+.archive-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 48px;
+}
+
+.archive-filters a {
+  border: 1px solid var(--line);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 11px 13px;
+  text-transform: uppercase;
+}
+
+.archive-filters a:hover,
+.archive-filters a[aria-current="page"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.archive-filters span {
+  color: var(--orange);
+  margin-left: 4px;
 }
 
 .category-results-empty {
@@ -1065,6 +1210,55 @@ button {
   padding-top: 80px;
 }
 
+.share-wonder {
+  align-items: end;
+  border-block: 1px solid var(--line);
+  display: grid;
+  gap: 24px;
+  margin-bottom: 80px;
+  padding-block: 34px;
+}
+
+.share-wonder h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 0;
+}
+
+.share-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.share-links a,
+.share-links button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding: 10px 12px;
+  text-transform: uppercase;
+}
+
+.share-links a:hover,
+.share-links button:hover {
+  background: var(--lime);
+  border-color: var(--ink);
+}
+
+.share-status {
+  color: rgba(23, 34, 28, 0.64);
+  font-size: 10px;
+  margin: 0;
+  min-height: 16px;
+}
+
 .related-intro {
   color: rgba(23, 34, 28, 0.66);
   line-height: 1.7;
@@ -1104,6 +1298,51 @@ button {
   color: rgba(255, 250, 240, 0.6);
   font-size: 11px;
   line-height: 1.6;
+}
+
+.footer-signup {
+  border-bottom: 1px solid rgba(255, 250, 240, 0.14);
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+}
+
+.email-signup-compact {
+  align-items: end;
+  background: transparent;
+  border: 0;
+  display: grid;
+  gap: 20px;
+  padding: 0;
+}
+
+.email-signup-compact .section-kicker {
+  color: var(--lime);
+}
+
+.email-signup-compact .email-signup-copy > p:last-child {
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 10px 0 0;
+}
+
+.email-signup-compact .email-signup-form {
+  margin: 0;
+}
+
+.email-signup-compact input[type="email"] {
+  border-color: rgba(255, 250, 240, 0.5);
+  color: var(--cream);
+}
+
+.email-signup-compact input[type="email"]::placeholder {
+  color: rgba(255, 250, 240, 0.45);
+}
+
+.email-signup-compact .email-signup-status {
+  color: rgba(255, 250, 240, 0.62);
+  grid-column: 1 / -1;
+  margin: 0;
 }
 
 .footer-projects {
@@ -1258,6 +1497,15 @@ button {
 
   .takeaway-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .growth-foundation {
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  }
+
+  .share-wonder,
+  .email-signup-compact {
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 }
 

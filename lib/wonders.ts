@@ -392,18 +392,26 @@ export function getRelatedWonders(wonder: Wonder): Wonder[] {
   const explicitlyRelated = wonder.related
     .map((slug) => allWonders.find((item) => item.slug === slug))
     .filter((item): item is Wonder => Boolean(item));
-
-  if (explicitlyRelated.length >= 2) {
-    return explicitlyRelated.slice(0, 2);
-  }
-
-  const fallbacks = allWonders.filter(
+  const sameCategory = allWonders.filter(
     (item) =>
       item.slug !== wonder.slug &&
+      item.category === wonder.category &&
       !explicitlyRelated.some((related) => related.slug === item.slug),
   );
+  const otherCategories = allWonders.filter(
+    (item) =>
+      item.slug !== wonder.slug &&
+      item.category !== wonder.category &&
+      !explicitlyRelated.some((related) => related.slug === item.slug),
+  );
+  const related = [
+    ...explicitlyRelated.filter((item) => item.category === wonder.category),
+    ...sameCategory,
+    ...explicitlyRelated.filter((item) => item.category !== wonder.category),
+    ...otherCategories,
+  ];
 
-  return [...explicitlyRelated, ...fallbacks].slice(0, 2);
+  return related.slice(0, 4);
 }
 
 export function categorySlug(category: CategoryName): string {

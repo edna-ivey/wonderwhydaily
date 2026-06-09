@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { RevealQuiz } from "@/components/reveal-quiz";
+import { ShareWonder } from "@/components/share-wonder";
 import { WonderArt } from "@/components/wonder-art";
 import { WonderCard } from "@/components/wonder-card";
 import {
@@ -12,6 +13,7 @@ import {
 
 export function WonderDetail({ wonder }: { wonder: Wonder }) {
   const related = getRelatedWonders(wonder);
+  const wonderUrl = `https://wonderwhydaily.com/wonders/${wonder.slug}`;
 
   return (
     <main id="main-content">
@@ -67,6 +69,8 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
               <p>{wonder.tryItYourself}</p>
             </aside>
           </div>
+
+          <ShareWonder title={wonder.title} url={wonderUrl} />
 
           <section className="related-section" aria-labelledby="related-heading">
             <div className="section-heading">

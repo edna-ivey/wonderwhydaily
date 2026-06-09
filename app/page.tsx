@@ -1,10 +1,13 @@
 import Link from "next/link";
+import { EmailSignup } from "@/components/email-signup";
+import { ReadingStreak } from "@/components/reading-streak";
 import { WonderArt } from "@/components/wonder-art";
 import { WonderCard } from "@/components/wonder-card";
 import {
   formatWonderDate,
   getAllWonders,
   getCategories,
+  getEditorialDate,
   getTodaysWonder,
 } from "@/lib/wonders";
 
@@ -12,6 +15,7 @@ export default function Home() {
   const today = getTodaysWonder();
   const recent = getAllWonders().filter((wonder) => wonder.slug !== today.slug).slice(0, 3);
   const categories = getCategories();
+  const editorialDate = getEditorialDate();
 
   return (
     <main id="main-content">
@@ -77,6 +81,11 @@ export default function Home() {
             <WonderCard wonder={wonder} key={wonder.slug} />
           ))}
         </div>
+      </section>
+
+      <section className="wide-shell growth-foundation" aria-label="Stay curious">
+        <EmailSignup />
+        <ReadingStreak editorialDate={editorialDate} />
       </section>
 
       <section className="category-band">
