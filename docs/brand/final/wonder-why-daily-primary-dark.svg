@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 480 144" role="img" aria-labelledby="title">
+  <title id="title">Wonder Why Daily</title>
+  <rect x="-8" y="-8" width="480" height="144" fill="#17221c"/>
+  <path d="M6 84C-2 62 26 32 68 16C110 0 154 4 164 24C176 46 152 74 118 92C76 114 30 110 12 96" fill="none" stroke="#fffaf0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8.8"/>
+  <path d="M18 96C36 116 82 114 122 96C152 82 170 62 166 44" fill="none" stroke="#fffaf0" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.6"/>
+  <path d="M50 4C28 10 40 50 64 80C88 110 122 126 148 120C168 116 164 94 150 70C130 38 84-2 54 4" fill="none" stroke="#d5f07c" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <circle cx="150" cy="70" r="7.7" fill="#d5f07c" stroke="#17221c" stroke-width="2.8"/>
+  <text x="184" y="54" fill="#fffaf0" font-family='Georgia, "Times New Roman", serif' font-size="42" font-weight="700">Wonder Why</text>
+  <text x="300" y="90" fill="#fffaf0" font-family='"Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif' font-size="19" font-weight="800" letter-spacing="8" text-anchor="middle">DAILY</text>
+</svg>

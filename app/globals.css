@@ -97,11 +97,16 @@ button {
 .brand {
   align-items: center;
   display: inline-flex;
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 0.88;
-  gap: 9px;
+}
+
+.brand-logo {
+  display: block;
+  height: 52px;
+  width: 199px;
+}
+
+.brand-logo text {
+  dominant-baseline: auto;
 }
 
 .brand small {
@@ -112,19 +117,6 @@ button {
   letter-spacing: 0.2em;
   margin-top: 5px;
   text-transform: uppercase;
-}
-
-.brand-mark {
-  align-items: center;
-  background: var(--ink);
-  border-radius: 50%;
-  color: var(--lime);
-  display: flex;
-  font-family: var(--font-display);
-  font-size: 24px;
-  height: 40px;
-  justify-content: center;
-  width: 40px;
 }
 
 .primary-nav {
@@ -211,6 +203,10 @@ button {
 
 .home-hero-copy {
   max-width: 940px;
+}
+
+.home-hero-copy .eyebrow-row {
+  margin-bottom: clamp(34px, 4vw, 52px);
 }
 
 .eyebrow-row {
@@ -322,6 +318,10 @@ button {
   line-height: 1.7;
   margin: 24px 0 30px;
   max-width: 580px;
+}
+
+.home-hero .hero-excerpt {
+  margin-block: clamp(32px, 3vw, 42px) clamp(38px, 4vw, 52px);
 }
 
 .button {
@@ -484,23 +484,20 @@ button {
   width: 5.25rem;
 }
 
-.art-question {
-  align-items: center;
-  background: var(--cream);
-  border: 2px solid var(--ink);
+.art-orbit-dot {
+  background: var(--ink);
   border-radius: 50%;
-  bottom: 12%;
-  display: flex;
-  font-family: var(--font-display);
-  font-size: 25px;
-  font-weight: 800;
-  height: 52px;
-  justify-content: center;
+  bottom: 20%;
+  height: 18px;
   position: absolute;
-  right: 12%;
-  transform: rotate(8deg);
-  width: 52px;
+  right: 15%;
+  width: 18px;
   z-index: 3;
+}
+
+.compact .art-orbit-dot {
+  height: 12px;
+  width: 12px;
 }
 
 .hero-marquee {
@@ -1100,18 +1097,7 @@ button {
 .site-footer {
   background: var(--ink);
   color: var(--cream);
-  padding-block: 48px;
-}
-
-.footer-inner {
-  align-items: start;
-  display: flex;
-  justify-content: space-between;
-}
-
-.site-footer strong {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
+  padding-block: 52px 40px;
 }
 
 .site-footer p {
@@ -1120,8 +1106,111 @@ button {
   line-height: 1.6;
 }
 
-.footer-note {
-  text-align: right;
+.footer-projects {
+  text-align: center;
+}
+
+.footer-projects-title {
+  color: rgba(255, 250, 240, 0.5) !important;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.footer-project-list {
+  align-items: start;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+}
+
+.footer-project {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 260px;
+}
+
+.footer-project-list a {
+  color: var(--cream);
+  transition: color 160ms ease;
+}
+
+.footer-project-list a:hover,
+.footer-project-list a:focus-visible {
+  color: var(--lime);
+}
+
+.footer-project strong {
+  color: inherit;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.footer-project span {
+  color: rgba(255, 250, 240, 0.55);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.footer-project-coming-soon {
+  color: var(--cream);
+}
+
+.footer-founder {
+  border-top: 1px solid rgba(255, 250, 240, 0.14);
+  margin-top: 88px;
+  padding-block: 56px 24px;
+  text-align: center;
+}
+
+.footer-founder p {
+  margin: 0;
+}
+
+.about-story {
+  padding-bottom: 120px;
+}
+
+.about-story p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  line-height: 1.5;
+  margin-block: 0 32px;
+}
+
+.about-pull-quote {
+  border-left: 4px solid var(--lime);
+  margin: 72px 0;
+  padding-left: 32px;
+}
+
+.about-pull-quote p {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.about-story h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  margin: 128px 0 48px;
+}
+
+.about-story .about-tagline {
+  color: var(--orange);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-top: 40px;
+  text-transform: uppercase;
 }
 
 .not-found {
@@ -1244,7 +1333,15 @@ button {
 
 @media (max-width: 560px) {
   .primary-nav {
+    display: grid;
     gap: 12px;
+    grid-template-columns: 43px 70px;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 125px;
   }
 
   .primary-nav > a,
@@ -1256,13 +1353,21 @@ button {
     display: none;
   }
 
-  .brand {
-    font-size: 15px;
+  .about-nav-link {
+    display: none;
   }
 
-  .brand-mark {
-    height: 34px;
-    width: 34px;
+  .category-menu {
+    width: 70px;
+  }
+
+  .brand {
+    flex: 0 0 auto;
+  }
+
+  .brand-logo {
+    height: auto;
+    width: 158px;
   }
 
   .home-hero-grid,
@@ -1319,15 +1424,28 @@ button {
     order: 1;
   }
 
-  .section-heading,
-  .footer-inner {
+  .section-heading {
     align-items: start;
     flex-direction: column;
     gap: 24px;
   }
 
-  .footer-note {
-    text-align: left;
+  .footer-project-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about-story {
+    padding-bottom: 80px;
+  }
+
+  .about-pull-quote {
+    margin-block: 52px;
+    padding-left: 22px;
+  }
+
+  .about-story h2 {
+    margin-top: 88px;
   }
 }
 

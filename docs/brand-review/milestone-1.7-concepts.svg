@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1900" role="img" aria-labelledby="title description">
+  <title id="title">Wonder Why Daily brand refinement concepts</title>
+  <description id="description">Three orbital logo concepts and three category illustration corner-detail alternatives.</description>
+  <defs>
+    <style>
+      .display { font-family: Georgia, "Times New Roman", serif; fill: #fffaf0; font-weight: 700; }
+      .display-dark { font-family: Georgia, "Times New Roman", serif; fill: #17221c; font-weight: 700; }
+      .sans { font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif; fill: #fffaf0; }
+      .sans-dark { font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif; fill: #17221c; }
+      .label { font-size: 20px; font-weight: 800; letter-spacing: 2px; }
+      .body { font-size: 22px; }
+      .note { font-size: 17px; opacity: .7; }
+      .wordmark { font-size: 42px; }
+      .daily { font-size: 15px; font-weight: 800; letter-spacing: 7px; }
+      .lime-stroke { fill: none; stroke: #d5f07c; stroke-linecap: round; stroke-linejoin: round; }
+      .cream-stroke { fill: none; stroke: #fffaf0; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-stroke { fill: none; stroke: #17221c; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#17221c" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1900" fill="#f5f1e7"/>
+  <rect x="0" y="0" width="1600" height="250" fill="#17221c"/>
+  <text x="100" y="104" class="display" font-size="66">Brand refinement concepts</text>
+  <text x="100" y="162" class="sans" font-size="23" opacity=".72">Derived from the current orbital illustration system. Concepts only. No live-site replacement.</text>
+  <circle cx="1420" cy="122" r="62" fill="#d5f07c"/>
+  <ellipse cx="1420" cy="122" rx="100" ry="34" class="cream-stroke" stroke-width="3" transform="rotate(-24 1420 122)"/>
+  <circle cx="1507" cy="80" r="9" fill="#fffaf0"/>
+
+  <text x="100" y="330" class="sans-dark label">LOGO CONCEPTS</text>
+  <text x="100" y="372" class="display-dark" font-size="32">Three ways to express curiosity without reading as science education</text>
+
+  <!-- Concept 1 -->
+  <rect x="100" y="425" width="440" height="480" rx="4" fill="#17221c" filter="url(#shadow)"/>
+  <text x="135" y="474" class="sans label">01 · THE CURIOSITY TRAIL</text>
+  <g transform="translate(240 535)">
+    <circle cx="80" cy="80" r="72" fill="#213329"/>
+    <path d="M26 100C8 55 48 18 92 29c39 10 54 53 34 83-18 28-58 34-82 13" class="lime-stroke" stroke-width="7"/>
+    <circle cx="44" cy="125" r="11" fill="#d5f07c"/>
+    <circle cx="128" cy="43" r="6" fill="#fffaf0"/>
+  </g>
+  <text x="320" y="747" text-anchor="middle" class="display wordmark">Wonder Why</text>
+  <text x="320" y="784" text-anchor="middle" class="sans daily">DAILY</text>
+  <text x="135" y="839" class="sans note">An open path with an unfinished end.</text>
+  <text x="135" y="866" class="sans note">Curiosity is movement, not a destination.</text>
+
+  <!-- Concept 2 -->
+  <rect x="580" y="425" width="440" height="480" rx="4" fill="#17221c" filter="url(#shadow)"/>
+  <text x="615" y="474" class="sans label">02 · MANY WORLDS</text>
+  <g transform="translate(720 535)">
+    <circle cx="80" cy="80" r="72" fill="#213329"/>
+    <circle cx="80" cy="80" r="13" fill="#d5f07c"/>
+    <path d="M19 91c24-48 86-67 129-29" class="lime-stroke" stroke-width="5"/>
+    <path d="M29 123c39 27 94 11 112-33" class="cream-stroke" stroke-width="3" opacity=".8"/>
+    <circle cx="25" cy="89" r="8" fill="#fffaf0"/>
+    <circle cx="145" cy="63" r="8" fill="#d5f07c"/>
+    <path d="m131 116 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#fffaf0"/>
+  </g>
+  <text x="800" y="747" text-anchor="middle" class="display wordmark">Wonder Why</text>
+  <text x="800" y="784" text-anchor="middle" class="sans daily">DAILY</text>
+  <text x="615" y="839" class="sans note">Different questions sharing one orbit.</text>
+  <text x="615" y="866" class="sans note">Broad enough for history, nature, and ideas.</text>
+
+  <!-- Concept 3 -->
+  <rect x="1060" y="425" width="440" height="480" rx="4" fill="#17221c" filter="url(#shadow)"/>
+  <text x="1095" y="474" class="sans label">03 · THE WONDER PORTAL</text>
+  <g transform="translate(1200 535)">
+    <circle cx="80" cy="80" r="72" fill="#d5f07c"/>
+    <circle cx="80" cy="80" r="46" fill="#17221c"/>
+    <path d="M18 109c43 14 102-7 134-57" class="ink-stroke" stroke-width="5"/>
+    <circle cx="143" cy="56" r="10" fill="#fffaf0" stroke="#17221c" stroke-width="4"/>
+    <path d="m111 25 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#fffaf0"/>
+  </g>
+  <text x="1280" y="747" text-anchor="middle" class="display wordmark">Wonder Why</text>
+  <text x="1280" y="784" text-anchor="middle" class="sans daily">DAILY</text>
+  <text x="1095" y="839" class="sans note">A doorway into whatever comes next.</text>
+  <text x="1095" y="866" class="sans note">The boldest and most editorial option.</text>
+
+  <text x="100" y="1010" class="sans-dark label">CATEGORY ILLUSTRATION DETAIL</text>
+  <text x="100" y="1052" class="display-dark" font-size="32">Question-mark comparison using the existing illustration language</text>
+
+  <!-- Option A -->
+  <rect x="100" y="1105" width="440" height="500" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+  <text x="135" y="1154" class="sans-dark label">OPTION A · REMOVE IT</text>
+  <g transform="translate(170 1210)">
+    <circle cx="150" cy="150" r="145" fill="#ffc46b"/>
+    <ellipse cx="150" cy="150" rx="118" ry="44" class="ink-stroke" stroke-width="3" transform="rotate(55 150 150)"/>
+    <ellipse cx="150" cy="150" rx="118" ry="70" class="ink-stroke" stroke-width="3" transform="rotate(-25 150 150)"/>
+    <g transform="translate(110 108) scale(2)" class="ink-stroke" stroke-width="2.4">
+      <circle cx="16" cy="12" r="2.3"/>
+      <circle cx="24" cy="12" r="2.3"/>
+      <circle cx="11.5" cy="19" r="2.3"/>
+      <circle cx="28.5" cy="19" r="2.3"/>
+      <path d="M13 28c0-4.2 3.1-8 7-8s7 3.8 7 8c0 3-2.5 4.8-7 4.8S13 31 13 28Z"/>
+    </g>
+  </g>
+  <text x="135" y="1560" class="sans-dark note">Cleanest and most timeless.</text>
+
+  <!-- Option B -->
+  <rect x="580" y="1105" width="440" height="500" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+  <text x="615" y="1154" class="sans-dark label">OPTION B · ORBITING DOT</text>
+  <g transform="translate(650 1210)">
+    <circle cx="150" cy="150" r="145" fill="#ffc46b"/>
+    <ellipse cx="150" cy="150" rx="118" ry="44" class="ink-stroke" stroke-width="3" transform="rotate(55 150 150)"/>
+    <ellipse cx="150" cy="150" rx="118" ry="70" class="ink-stroke" stroke-width="3" transform="rotate(-25 150 150)"/>
+    <g transform="translate(110 108) scale(2)" class="ink-stroke" stroke-width="2.4">
+      <circle cx="16" cy="12" r="2.3"/>
+      <circle cx="24" cy="12" r="2.3"/>
+      <circle cx="11.5" cy="19" r="2.3"/>
+      <circle cx="28.5" cy="19" r="2.3"/>
+      <path d="M13 28c0-4.2 3.1-8 7-8s7 3.8 7 8c0 3-2.5 4.8-7 4.8S13 31 13 28Z"/>
+    </g>
+    <circle cx="253" cy="235" r="11" fill="#17221c"/>
+    <circle cx="253" cy="235" r="5" fill="#d5f07c"/>
+  </g>
+  <text x="615" y="1560" class="sans-dark note">Best match for the orbital system.</text>
+
+  <!-- Option C -->
+  <rect x="1060" y="1105" width="440" height="500" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+  <text x="1095" y="1154" class="sans-dark label">OPTION C · SPARKLE</text>
+  <g transform="translate(1130 1210)">
+    <circle cx="150" cy="150" r="145" fill="#ffc46b"/>
+    <ellipse cx="150" cy="150" rx="118" ry="44" class="ink-stroke" stroke-width="3" transform="rotate(55 150 150)"/>
+    <ellipse cx="150" cy="150" rx="118" ry="70" class="ink-stroke" stroke-width="3" transform="rotate(-25 150 150)"/>
+    <g transform="translate(110 108) scale(2)" class="ink-stroke" stroke-width="2.4">
+      <circle cx="16" cy="12" r="2.3"/>
+      <circle cx="24" cy="12" r="2.3"/>
+      <circle cx="11.5" cy="19" r="2.3"/>
+      <circle cx="28.5" cy="19" r="2.3"/>
+      <path d="M13 28c0-4.2 3.1-8 7-8s7 3.8 7 8c0 3-2.5 4.8-7 4.8S13 31 13 28Z"/>
+    </g>
+    <path d="m250 220 6 14 14 6-14 6-6 14-6-14-14-6 14-6Z" fill="#fffaf0" stroke="#17221c" stroke-width="3"/>
+  </g>
+  <text x="1095" y="1560" class="sans-dark note">Most magical, but slightly more decorative.</text>
+
+  <rect x="100" y="1680" width="1400" height="130" rx="4" fill="#17221c"/>
+  <text x="140" y="1734" class="display" font-size="29">Recommended pairing for refinement</text>
+  <text x="140" y="1774" class="sans" font-size="21" opacity=".75">Logo 01, The Curiosity Trail + Option B, Orbiting Dot. Both express movement and discovery without narrowing the brand to science.</text>
+</svg>

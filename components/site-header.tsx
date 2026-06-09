@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { getCategories } from "@/lib/wonders";
 
 export function SiteHeader() {
@@ -11,17 +12,14 @@ export function SiteHeader() {
       </a>
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="Wonder Why Daily home">
-          <span className="brand-mark" aria-hidden="true">
-            ?
-          </span>
-          <span>
-            Wonder Why
-            <small>Daily</small>
-          </span>
+          <BrandLogo />
         </Link>
         <nav className="primary-nav" aria-label="Main navigation">
           <Link href="/">Today</Link>
           <Link href="/archive">Archive</Link>
+          <Link className="about-nav-link" href="/about">
+            About
+          </Link>
           <details className="category-menu">
             <summary>Categories</summary>
             <div className="category-menu-panel">

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1080" role="img" aria-labelledby="title description">
+  <title id="title">Wonder Why Daily Milestone 1.9 logo concepts</title>
+  <description id="description">Three review-only orbital logo concepts shown as publication wordmarks and favicon-scale marks.</description>
+  <defs>
+    <style>
+      .display { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif; }
+      .label { font-size: 18px; font-weight: 800; letter-spacing: 2px; }
+      .wordmark { font-size: 38px; }
+      .daily { font-size: 13px; font-weight: 800; letter-spacing: 6px; }
+      .note { font-size: 17px; opacity: .7; }
+      .lime-line { fill: none; stroke: #d5f07c; stroke-linecap: round; stroke-linejoin: round; }
+      .cream-line { fill: none; stroke: #fffaf0; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#17221c" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1080" fill="#f5f1e7"/>
+  <rect width="1600" height="230" fill="#17221c"/>
+  <text x="100" y="95" class="display" fill="#fffaf0" font-size="62">Orbital logo exploration</text>
+  <text x="100" y="150" class="sans" fill="#fffaf0" font-size="22" opacity=".7">Review only · Existing forest, lime, cream, and editorial wordmark · No production replacement</text>
+  <text x="100" y="305" class="sans label" fill="#17221c">THREE DIRECTIONS</text>
+  <text x="100" y="347" class="display" fill="#17221c" font-size="30">Curiosity and exploration, without an atom or central nucleus</text>
+
+  <!-- A: Orbital Glyph -->
+  <g transform="translate(100 405)">
+    <rect width="440" height="550" rx="4" fill="#17221c" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#fffaf0">A · ORBITAL GLYPH</text>
+    <g transform="translate(138 88)">
+      <circle cx="82" cy="82" r="76" fill="#213329"/>
+      <path d="M22 104C5 64 34 25 77 23c37-2 68 25 66 59-2 31-29 54-61 52" class="lime-line" stroke-width="7"/>
+      <path d="M35 42c27 29 66 44 98 29" class="cream-line" stroke-width="3"/>
+      <circle cx="80" cy="134" r="9" fill="#d5f07c"/>
+      <circle cx="134" cy="70" r="5" fill="#fffaf0"/>
+    </g>
+    <text x="220" y="330" text-anchor="middle" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="220" y="366" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+    <text x="34" y="430" class="sans note" fill="#fffaf0">A compact, asymmetric movement mark.</text>
+    <text x="34" y="457" class="sans note" fill="#fffaf0">Closest to the current production direction.</text>
+    <g transform="translate(346 470)">
+      <rect width="58" height="58" rx="12" fill="#213329"/>
+      <path d="M10 37C4 22 15 8 30 9c14 0 23 11 21 22-2 11-12 18-23 18" class="lime-line" stroke-width="3.6"/>
+      <circle cx="28" cy="49" r="4" fill="#d5f07c"/>
+    </g>
+  </g>
+
+  <!-- B: Hidden Question -->
+  <g transform="translate(580 405)">
+    <rect width="440" height="550" rx="4" fill="#17221c" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#fffaf0">B · HIDDEN QUESTION</text>
+    <g transform="translate(138 88)">
+      <circle cx="82" cy="82" r="76" fill="#213329"/>
+      <path d="M24 61c10-32 65-44 96-18 27 22 12 51-20 58-20 5-26 12-25 28" class="lime-line" stroke-width="7"/>
+      <path d="M27 109c27 15 70 11 102-9" class="cream-line" stroke-width="3"/>
+      <circle cx="75" cy="145" r="7" fill="#d5f07c"/>
+      <circle cx="26" cy="108" r="5" fill="#fffaf0"/>
+    </g>
+    <text x="220" y="330" text-anchor="middle" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="220" y="366" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+    <text x="34" y="430" class="sans note" fill="#fffaf0">The question appears only after a second look.</text>
+    <text x="34" y="457" class="sans note" fill="#fffaf0">The most explicitly curiosity-led option.</text>
+    <g transform="translate(346 470)">
+      <rect width="58" height="58" rx="12" fill="#213329"/>
+      <path d="M10 20c5-12 28-15 38-4 9 10 2 20-11 23-7 2-10 5-10 9" class="lime-line" stroke-width="3.6"/>
+      <circle cx="27" cy="53" r="3" fill="#d5f07c"/>
+    </g>
+  </g>
+
+  <!-- C: Wonder Orbit -->
+  <g transform="translate(1060 405)">
+    <rect width="440" height="550" rx="4" fill="#17221c" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#fffaf0">C · WONDER ORBIT</text>
+    <g transform="translate(138 88)">
+      <circle cx="82" cy="82" r="76" fill="#213329"/>
+      <path d="M13 93c23-51 84-76 137-39" class="lime-line" stroke-width="6"/>
+      <path d="M22 122c43 28 101 9 126-38" class="cream-line" stroke-width="3"/>
+      <path d="M48 20c45 5 78 38 83 77" class="lime-line" stroke-width="2.5" opacity=".55"/>
+      <circle cx="13" cy="93" r="8" fill="#d5f07c"/>
+      <path d="m139 45 4 9 9 4-9 4-4 9-4-9-9-4 9-4Z" fill="#fffaf0"/>
+    </g>
+    <text x="220" y="330" text-anchor="middle" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="220" y="366" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+    <text x="34" y="430" class="sans note" fill="#fffaf0">Layered paths around an intentionally open center.</text>
+    <text x="34" y="457" class="sans note" fill="#fffaf0">Closest to the large category artwork.</text>
+    <g transform="translate(346 470)">
+      <rect width="58" height="58" rx="12" fill="#213329"/>
+      <path d="M5 36c9-22 34-34 49-18" class="lime-line" stroke-width="3.6"/>
+      <path d="M10 47c18 10 39 2 47-15" class="cream-line" stroke-width="2"/>
+      <circle cx="5" cy="36" r="4" fill="#d5f07c"/>
+    </g>
+  </g>
+
+  <text x="100" y="1020" class="sans" fill="#17221c" font-size="18" opacity=".68">All concepts preserve orbital movement, avoid intersecting electron ellipses, leave the center open, and center DAILY beneath the publication name.</text>
+</svg>

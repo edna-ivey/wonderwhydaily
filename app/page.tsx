@@ -22,10 +22,6 @@ export default function Home() {
               <span className="category-pill">Today&apos;s Wonder</span>
               <time dateTime={today.date}>{formatWonderDate(today.date)}</time>
             </div>
-            <p className="hero-value-proposition">
-              One Fascinating Question
-              <span>Every Day</span>
-            </p>
             <h1>{today.title}</h1>
             <p className="hero-excerpt">{today.excerpt}</p>
             <Link className="button button-light" href={`/wonders/${today.slug}`}>

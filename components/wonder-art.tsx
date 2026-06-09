@@ -92,9 +92,7 @@ export function WonderArt({
       >
         <CategorySymbol category={category} />
       </svg>
-      <span className="art-question" aria-hidden="true">
-        ?
-      </span>
+      <span className="art-orbit-dot" aria-hidden="true" />
     </div>
   );
 }

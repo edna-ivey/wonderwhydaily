@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1520" role="img" aria-labelledby="title description">
+  <title id="title">Wonder Why Daily category-native logo variations</title>
+  <description id="description">Three close logo variations derived from the existing category illustration system, each with two crossing orbital paths, a meaningful center, and a subtle discovery point.</description>
+  <defs>
+    <style>
+      .display { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+      .sans { font-family: "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif; }
+      .label { font-size: 17px; font-weight: 800; letter-spacing: 2px; }
+      .wordmark { font-size: 32px; }
+      .daily { font-size: 10px; font-weight: 800; letter-spacing: 5px; }
+      .note { font-size: 16px; opacity: .72; }
+      .ink { fill: none; stroke: #17221c; stroke-linecap: round; stroke-linejoin: round; }
+      .lime { fill: none; stroke: #d5f07c; stroke-linecap: round; stroke-linejoin: round; }
+      .cream { fill: none; stroke: #fffaf0; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#17221c" flood-opacity=".11"/>
+    </filter>
+
+    <!-- Variation 1: open reveal ring center -->
+    <symbol id="v1-light" viewBox="0 0 120 120">
+      <path d="M11 69C21 28 80 10 108 38c18 19-7 44-40 57-24 9-44 5-54-6" class="ink" stroke-width="4.2"/>
+      <path d="M36 8c-17 18-11 51 14 76 18 18 39 25 55 15" class="ink" stroke-width="3.5"/>
+      <path d="M48 67c-6-8-4-20 5-26 9-6 21-4 27 4 4 6 4 13 1 18" class="ink" stroke-width="4.2"/>
+      <circle cx="104" cy="99" r="5" fill="#d5f07c"/>
+    </symbol>
+    <symbol id="v1-dark" viewBox="0 0 120 120">
+      <path d="M11 69C21 28 80 10 108 38c18 19-7 44-40 57-24 9-44 5-54-6" class="cream" stroke-width="4.2"/>
+      <path d="M36 8c-17 18-11 51 14 76 18 18 39 25 55 15" class="lime" stroke-width="3.5"/>
+      <path d="M48 67c-6-8-4-20 5-26 9-6 21-4 27 4 4 6 4 13 1 18" class="cream" stroke-width="4.2"/>
+      <circle cx="104" cy="99" r="5" fill="#d5f07c"/>
+    </symbol>
+
+    <!-- Variation 2: unfolding center path -->
+    <symbol id="v2-light" viewBox="0 0 120 120">
+      <path d="M10 72C24 27 78 11 107 38c17 17-2 42-34 55-26 11-49 8-61-3" class="ink" stroke-width="4.2"/>
+      <path d="M39 8c-19 16-16 48 7 75 17 20 39 28 57 19" class="ink" stroke-width="3.5"/>
+      <path d="M48 72c4-16 21-26 35-19 7 4 9 12 5 18-4 6-13 8-19 4-5-3-6-9-3-13" class="ink" stroke-width="4"/>
+      <circle cx="102" cy="101" r="5" fill="#d5f07c"/>
+    </symbol>
+    <symbol id="v2-dark" viewBox="0 0 120 120">
+      <path d="M10 72C24 27 78 11 107 38c17 17-2 42-34 55-26 11-49 8-61-3" class="cream" stroke-width="4.2"/>
+      <path d="M39 8c-19 16-16 48 7 75 17 20 39 28 57 19" class="lime" stroke-width="3.5"/>
+      <path d="M48 72c4-16 21-26 35-19 7 4 9 12 5 18-4 6-13 8-19 4-5-3-6-9-3-13" class="cream" stroke-width="4"/>
+      <circle cx="102" cy="101" r="5" fill="#d5f07c"/>
+    </symbol>
+
+    <!-- Variation 3: offset lens/reveal center -->
+    <symbol id="v3-light" viewBox="0 0 120 120">
+      <path d="M11 71C22 29 79 10 108 37c19 18-4 44-37 57-25 10-47 7-58-4" class="ink" stroke-width="4.2"/>
+      <path d="M37 8c-18 17-13 50 11 76 18 19 40 26 57 16" class="ink" stroke-width="3.5"/>
+      <path d="M45 63c10-14 29-16 42-6" class="ink" stroke-width="4"/>
+      <path d="M50 66c9 7 23 7 33-1" class="ink" stroke-width="3"/>
+      <circle cx="104" cy="100" r="5" fill="#d5f07c"/>
+    </symbol>
+    <symbol id="v3-dark" viewBox="0 0 120 120">
+      <path d="M11 71C22 29 79 10 108 37c19 18-4 44-37 57-25 10-47 7-58-4" class="cream" stroke-width="4.2"/>
+      <path d="M37 8c-18 17-13 50 11 76 18 19 40 26 57 16" class="lime" stroke-width="3.5"/>
+      <path d="M45 63c10-14 29-16 42-6" class="cream" stroke-width="4"/>
+      <path d="M50 66c9 7 23 7 33-1" class="cream" stroke-width="3"/>
+      <circle cx="104" cy="100" r="5" fill="#d5f07c"/>
+    </symbol>
+  </defs>
+
+  <rect width="1800" height="1520" fill="#f5f1e7"/>
+  <rect width="1800" height="220" fill="#17221c"/>
+  <text x="110" y="88" class="display" fill="#fffaf0" font-size="60">Category-native logo review</text>
+  <text x="110" y="142" class="sans" fill="#fffaf0" font-size="22" opacity=".72">Review only · Meaningful center + crossing motion + subtle discovery point · Production unchanged</text>
+
+  <text x="110" y="285" class="sans label" fill="#17221c">SOURCE OF TRUTH</text>
+  <text x="110" y="326" class="display" fill="#17221c" font-size="30">Each mark is built like a Wonder Why Daily category illustration</text>
+
+  <!-- Variation 1 -->
+  <g transform="translate(110 375)">
+    <rect width="500" height="1020" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#17221c">VARIATION 1 · OPEN REVEAL</text>
+    <text x="34" y="80" class="sans note" fill="#17221c">Something is taking shape, but is not complete yet.</text>
+
+    <text x="34" y="135" class="sans label" fill="#17221c">INSIDE HERO ART</text>
+    <circle cx="250" cy="282" r="145" fill="#d5f07c"/>
+    <circle cx="250" cy="282" r="110" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <circle cx="250" cy="282" r="64" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <use href="#v1-light" x="145" y="177" width="210" height="210"/>
+
+    <text x="34" y="475" class="sans label" fill="#17221c">HEADER · LIGHT</text>
+    <rect x="34" y="499" width="432" height="128" fill="#f5f1e7"/>
+    <use href="#v1-light" x="52" y="507" width="112" height="112"/>
+    <text x="174" y="548" class="display wordmark" fill="#17221c">Wonder Why</text>
+    <text x="256" y="580" text-anchor="middle" class="sans daily" fill="#17221c">DAILY</text>
+
+    <text x="34" y="682" class="sans label" fill="#17221c">HEADER · DARK</text>
+    <rect x="34" y="706" width="432" height="128" fill="#17221c"/>
+    <use href="#v1-dark" x="52" y="714" width="112" height="112"/>
+    <text x="174" y="755" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="256" y="787" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+
+    <text x="34" y="890" class="sans label" fill="#17221c">CENTER READ</text>
+    <text x="34" y="925" class="sans note" fill="#17221c">An open ring suggests a reveal</text>
+    <text x="34" y="952" class="sans note" fill="#17221c">without becoming a solid nucleus.</text>
+  </g>
+
+  <!-- Variation 2 -->
+  <g transform="translate(650 375)">
+    <rect width="500" height="1020" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#17221c">VARIATION 2 · UNFOLDING IDEA</text>
+    <text x="34" y="80" class="sans note" fill="#17221c">The center feels like a thought discovering itself.</text>
+
+    <text x="34" y="135" class="sans label" fill="#17221c">INSIDE HERO ART</text>
+    <circle cx="250" cy="282" r="145" fill="#d5f07c"/>
+    <circle cx="250" cy="282" r="110" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <circle cx="250" cy="282" r="64" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <use href="#v2-light" x="145" y="177" width="210" height="210"/>
+
+    <text x="34" y="475" class="sans label" fill="#17221c">HEADER · LIGHT</text>
+    <rect x="34" y="499" width="432" height="128" fill="#f5f1e7"/>
+    <use href="#v2-light" x="52" y="507" width="112" height="112"/>
+    <text x="174" y="548" class="display wordmark" fill="#17221c">Wonder Why</text>
+    <text x="256" y="580" text-anchor="middle" class="sans daily" fill="#17221c">DAILY</text>
+
+    <text x="34" y="682" class="sans label" fill="#17221c">HEADER · DARK</text>
+    <rect x="34" y="706" width="432" height="128" fill="#17221c"/>
+    <use href="#v2-dark" x="52" y="714" width="112" height="112"/>
+    <text x="174" y="755" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="256" y="787" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+
+    <text x="34" y="890" class="sans label" fill="#17221c">CENTER READ</text>
+    <text x="34" y="925" class="sans note" fill="#17221c">A small unfolding curve makes</text>
+    <text x="34" y="952" class="sans note" fill="#17221c">the center active and exploratory.</text>
+  </g>
+
+  <!-- Variation 3 -->
+  <g transform="translate(1190 375)">
+    <rect width="500" height="1020" rx="4" fill="#fffaf0" filter="url(#shadow)"/>
+    <text x="34" y="48" class="sans label" fill="#17221c">VARIATION 3 · REVEAL LENS</text>
+    <text x="34" y="80" class="sans note" fill="#17221c">The center suggests something gradually being revealed.</text>
+
+    <text x="34" y="135" class="sans label" fill="#17221c">INSIDE HERO ART</text>
+    <circle cx="250" cy="282" r="145" fill="#d5f07c"/>
+    <circle cx="250" cy="282" r="110" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <circle cx="250" cy="282" r="64" fill="none" stroke="#17221c" stroke-opacity=".16"/>
+    <use href="#v3-light" x="145" y="177" width="210" height="210"/>
+
+    <text x="34" y="475" class="sans label" fill="#17221c">HEADER · LIGHT</text>
+    <rect x="34" y="499" width="432" height="128" fill="#f5f1e7"/>
+    <use href="#v3-light" x="52" y="507" width="112" height="112"/>
+    <text x="174" y="548" class="display wordmark" fill="#17221c">Wonder Why</text>
+    <text x="256" y="580" text-anchor="middle" class="sans daily" fill="#17221c">DAILY</text>
+
+    <text x="34" y="682" class="sans label" fill="#17221c">HEADER · DARK</text>
+    <rect x="34" y="706" width="432" height="128" fill="#17221c"/>
+    <use href="#v3-dark" x="52" y="714" width="112" height="112"/>
+    <text x="174" y="755" class="display wordmark" fill="#fffaf0">Wonder Why</text>
+    <text x="256" y="787" text-anchor="middle" class="sans daily" fill="#fffaf0">DAILY</text>
+
+    <text x="34" y="890" class="sans label" fill="#17221c">CENTER READ</text>
+    <text x="34" y="925" class="sans note" fill="#17221c">An offset reveal shape makes</text>
+    <text x="34" y="952" class="sans note" fill="#17221c">the center intentional and observant.</text>
+  </g>
+
+  <rect x="110" y="1442" width="1580" height="2" fill="#17221c" opacity=".16"/>
+  <text x="110" y="1480" class="sans" fill="#17221c" font-size="17" opacity=".68">Shared construction: one primary irregular orbit, one secondary crossing orbit, a meaningful abstract center, and one restrained discovery point.</text>
+</svg>
