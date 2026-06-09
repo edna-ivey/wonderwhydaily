@@ -20,6 +20,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/wonders/[slug]/opengraph-image": ["./content/wonders/**/*.mdx"],
+  },
   poweredByHeader: false,
   async headers() {
     return [
