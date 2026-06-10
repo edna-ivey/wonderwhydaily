@@ -3,17 +3,14 @@ import { notFound } from "next/navigation";
 import { WonderCard } from "@/components/wonder-card";
 import {
   getCategory,
-  getCategories,
   getWondersByCategory,
 } from "@/lib/wonders";
+
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ category: string }>;
 };
-
-export function generateStaticParams() {
-  return getCategories().map((category) => ({ category: category.slug }));
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
