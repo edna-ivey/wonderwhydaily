@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { WonderDetail } from "@/components/wonder-detail";
-import { getAllScheduledWonders, getWonder } from "@/lib/wonders";
+import { getWonder } from "@/lib/wonders";
+
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-export function generateStaticParams() {
-  return getAllScheduledWonders().map((wonder) => ({ slug: wonder.slug }));
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

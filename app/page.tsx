@@ -11,6 +11,8 @@ import {
   getTodaysWonder,
 } from "@/lib/wonders";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const today = getTodaysWonder();
   const recent = getAllWonders().filter((wonder) => wonder.slug !== today.slug).slice(0, 3);

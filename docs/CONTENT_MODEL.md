@@ -116,12 +116,16 @@ not difficulty levels:
 - Existing launch Wonders occupy June 1 through June 5.
 - New Wonders continue forward one edition per day.
 - Categories should be mixed across the calendar rather than published in blocks.
-- Today's edition uses `WONDER_TIME_ZONE` when configured and otherwise uses
-  the build environment's local timezone.
+- Today's edition uses `WONDER_TIME_ZONE`. Configure
+  `WONDER_TIME_ZONE=America/Anchorage` in local `.env.local` and in the Vercel
+  Production environment before deployment. Without it, the app falls back to
+  the server environment's timezone.
 - Collection helpers expose only Wonders whose date is on or before today's
   editorial date, sorted newest first.
-- Future Wonders may be statically prebuilt, but direct routes return
+- Direct Wonder routes evaluate publication state at request time and return
   `notFound()` until their publication date.
+- Date-sensitive routes render at request time so homepage, category, Wonder,
+  related-Wonder, and sitemap publication state advances without a redeploy.
 
 ## Channel Readiness Review
 
