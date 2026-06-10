@@ -58,12 +58,17 @@ export function EmailSignup({ compact = false }: { compact?: boolean }) {
           <p>Get one fascinating question delivered to your inbox.</p>
         )}
       </div>
-      <form className="email-signup-form" onSubmit={subscribe}>
+      <form
+        aria-busy={status === "submitting"}
+        className="email-signup-form"
+        onSubmit={subscribe}
+      >
         <label className="sr-only" htmlFor={emailId}>
           Email address
         </label>
         <input
           autoComplete="email"
+          disabled={status === "submitting"}
           id={emailId}
           name="email"
           placeholder="you@example.com"

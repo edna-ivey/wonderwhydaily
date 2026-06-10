@@ -1,26 +1,16 @@
 # Wonder Why Daily: Growth Foundation
 
-**Status:** Milestone 3.0 provider-neutral foundation
+**Status:** Milestone 4.0 production email foundation
 
 ## Email Signup
 
 The homepage and footer use the same accessible signup component. Submissions
-are validated by `POST /api/subscribe`, protected by a simple honeypot, and
-forwarded to the server-only `EMAIL_SIGNUP_WEBHOOK_URL`.
+are validated by `POST /api/subscribe`, protected by a honeypot and a
+best-effort per-IP rate limit, and sent to Buttondown using a server-only API
+key. Buttondown's default double opt-in remains enabled.
 
-The webhook keeps the site independent from a specific email provider. Until
-that environment variable is configured, the form clearly reports that the
-curiosity list is getting ready rather than pretending a subscription was
-stored.
-
-Expected webhook request:
-
-```json
-{
-  "email": "reader@example.com",
-  "source": "wonderwhydaily.com"
-}
-```
+See `docs/EMAIL_SIGNUP.md` for provider setup, testing, production deployment,
+verification, and rollback instructions.
 
 ## Reading Streaks
 
