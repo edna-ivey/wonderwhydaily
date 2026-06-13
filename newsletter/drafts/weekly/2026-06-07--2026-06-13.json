@@ -2,6 +2,7 @@
   "type": "weekly-digest",
   "periodStart": "2026-06-07",
   "periodEnd": "2026-06-13",
+  "featuredWonderSlug": "why-do-mirrors-reverse-left-and-right",
   "wonderSlugs": [
     "why-do-stars-twinkle",
     "why-are-oceans-salty",
@@ -11,7 +12,7 @@
     "why-did-people-build-pyramids",
     "why-do-mirrors-reverse-left-and-right"
   ],
-  "contentHash": "92f15b970c091428fa38e38e0811553e7bf28907edcfc4bd00aaeea6ab1097f3",
+  "contentHash": "1050250d5278949c088981ae5aa699ab72113ec96522e632e4306a143d4b5d4d",
   "status": "generated",
-  "generatedAt": "2026-06-13T19:41:04.224Z"
+  "generatedAt": "2026-06-13T20:15:25.804Z"
 }

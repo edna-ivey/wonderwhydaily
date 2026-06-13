@@ -6,11 +6,18 @@ import { getAllScheduledWonders, getEditorialDate, type Wonder } from "../../lib
 const baseUrl = "https://wonderwhydaily.com";
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 const dayMilliseconds = 24 * 60 * 60 * 1_000;
+const ratingRank = new Map([
+  ["⭐ Everyday Wonder", 1],
+  ["⭐⭐ Curious Wonder", 2],
+  ["⭐⭐⭐ Mind-Blowing Wonder", 3],
+  ["⭐⭐⭐⭐ Reality-Bending Wonder", 4],
+]);
 
 type DigestManifest = {
   type: "weekly-digest";
   periodStart: string;
   periodEnd: string;
+  featuredWonderSlug: string;
   wonderSlugs: string[];
   contentHash: string;
   status: "generated";
@@ -68,16 +75,12 @@ function renderWonderBlock(wonder: Wonder, featured: boolean): string {
 }
 
 function renderDigest(wonders: Wonder[], start: string, end: string): string {
-  const [featured, ...remaining] = wonders;
+  const featured = selectFeaturedWonder(wonders);
+  const remaining = wonders.filter((wonder) => wonder.slug !== featured.slug);
 
-  if (!featured) {
-    fail("no Wonders were selected.");
-  }
-
-  return [
-    `Subject: This week's Wonders: ${featured.title}`,
-    "Preheader: Seven fascinating questions. How many answers can you guess?",
-    "",
+  const subject = `This week's Wonders: ${featured.title}`;
+  const preheader = "Seven fascinating questions. How many answers can you guess?";
+  const body = [
     "# What made you wonder this week?",
     "",
     `Here are the Wonders published from ${formatDisplayDate(start)} through ${formatDisplayDate(end)}.`,
@@ -103,8 +106,39 @@ function renderDigest(wonders: Wonder[], start: string, end: string): string {
     "Stay curious.",
     "",
     "— Edna",
+  ].join("\n");
+
+  return [
+    "# Buttondown Copy",
+    "",
+    "## Subject",
+    "",
+    subject,
+    "",
+    "## Preheader",
+    "",
+    preheader,
+    "",
+    "## Body",
+    "",
+    body,
     "",
   ].join("\n");
+}
+
+function selectFeaturedWonder(wonders: Wonder[]): Wonder {
+  const featured = wonders.toSorted((a, b) => {
+    const ratingDifference =
+      (ratingRank.get(b.rating) ?? 0) - (ratingRank.get(a.rating) ?? 0);
+
+    return ratingDifference || a.date.localeCompare(b.date);
+  })[0];
+
+  if (!featured) {
+    fail("no Wonders were selected.");
+  }
+
+  return featured;
 }
 
 function validateSelection(wonders: Wonder[], expectedDates: string[], today: string) {
@@ -167,12 +201,14 @@ function main() {
 
   validateSelection(wonders, expectedDates, editorialDate);
 
+  const featuredWonder = selectFeaturedWonder(wonders);
   const markdown = renderDigest(wonders, periodStart, periodEnd);
   const contentHash = createHash("sha256").update(markdown).digest("hex");
   const manifest: DigestManifest = {
     type: "weekly-digest",
     periodStart,
     periodEnd,
+    featuredWonderSlug: featuredWonder.slug,
     wonderSlugs: wonders.map((wonder) => wonder.slug),
     contentHash,
     status: "generated",

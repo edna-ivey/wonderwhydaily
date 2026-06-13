@@ -7,29 +7,28 @@ edited, and pasted into Buttondown without custom email HTML.
 ## Draft Shape
 
 ```md
-Subject: This week's Wonders: {featured title}
-Preheader: Seven fascinating questions. How many answers can you guess?
+# Buttondown Copy
+
+## Subject
+
+This week's Wonders: {featured title}
+
+## Preheader
+
+Seven fascinating questions. How many answers can you guess?
+
+## Body
 
 # What made you wonder this week?
 
-{intro}
-
-## Featured Wonder
-
-{featured category} · {featured rating}
-
-### {featured title}
-
-{featured teaser}
-
-[Make Your Guess →]({featured canonical URL})
-
-## More Wonders From This Week
-
-{remaining Wonder blocks}
-
-[Explore All Wonders →](https://wonderwhydaily.com/archive)
+{digest body}
 ```
+
+The featured Wonder is the week's highest-rated Wonder. If multiple Wonders
+share the highest rating, the earliest one published that week is featured.
+
+Copy only the text beneath each `Subject`, `Preheader`, and `Body` heading into
+the corresponding Buttondown field.
 
 The digest must never reveal a correct answer, short answer, explanation,
 takeaway, or Cool Fact.
