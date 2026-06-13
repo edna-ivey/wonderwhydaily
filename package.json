@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "newsletter:weekly": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/newsletter/generate-weekly-digest.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.19",
