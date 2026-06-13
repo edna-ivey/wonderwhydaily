@@ -1,0 +1,17 @@
+{
+  "type": "weekly-digest",
+  "periodStart": "2026-06-07",
+  "periodEnd": "2026-06-13",
+  "wonderSlugs": [
+    "why-do-stars-twinkle",
+    "why-are-oceans-salty",
+    "why-do-we-yawn",
+    "why-does-your-phone-get-hot",
+    "why-does-popcorn-pop",
+    "why-did-people-build-pyramids",
+    "why-do-mirrors-reverse-left-and-right"
+  ],
+  "contentHash": "92f15b970c091428fa38e38e0811553e7bf28907edcfc4bd00aaeea6ab1097f3",
+  "status": "generated",
+  "generatedAt": "2026-06-13T19:41:04.224Z"
+}
