@@ -238,7 +238,7 @@ Scheduled Wonders table.
 
 ## Integrity Review
 
-- Repository Wonders represented: 67 of 67.
+- Repository Wonders represented: 88 of 88.
 - Scheduled titles represented: 130 of 130.
 - Approved candidate titles remaining: 0.
 - Exact or normalized duplicate titles: 0.
@@ -250,11 +250,11 @@ Scheduled Wonders table.
   appearances of a category within a rolling 14-day window.
 - The controlled schedule spans May 28, 2026 through October 17, 2026 with no
   unassigned dates.
-- No MDX files or Wonder content were generated during scheduling.
+- Repository content now exists through the August 23, 2026 scheduled edition.
 
 ## Current Editorial Concerns
 
-- The 76 Scheduled Wonders after August 2 require validated repository content
+- The 55 Scheduled Wonders after August 23 require validated repository content
   before their publication dates.
 - Ratings assigned to the newly Scheduled Wonders are editorial
   recommendations and should be confirmed during content production.
