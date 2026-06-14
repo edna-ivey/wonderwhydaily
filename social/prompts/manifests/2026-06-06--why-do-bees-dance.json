@@ -1,0 +1,24 @@
+{
+  "type": "social-image-prompt-set",
+  "wonderSlug": "why-do-bees-dance",
+  "publicationDate": "2026-06-06",
+  "promptFiles": [
+    {
+      "type": "instagram-image-prompts",
+      "path": "social/prompts/instagram/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "b3845e31af98053473b6cd5f1821095f9e48350795934323087b6f172b5749af"
+    },
+    {
+      "type": "short-video-visual-prompts",
+      "path": "social/prompts/tiktok/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "59cb92181add74b7dbeb2ae60f9b240af0c7da31823a93c05299dea5384794e9"
+    },
+    {
+      "type": "pinterest-image-prompt",
+      "path": "social/prompts/pinterest/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "24db9fd713889258a9147e5bfbf3adf035d2cf64871ac0131796a0efbed7c817"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:49:04.192Z"
+}

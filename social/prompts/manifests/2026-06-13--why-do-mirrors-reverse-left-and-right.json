@@ -1,0 +1,24 @@
+{
+  "type": "social-image-prompt-set",
+  "wonderSlug": "why-do-mirrors-reverse-left-and-right",
+  "publicationDate": "2026-06-13",
+  "promptFiles": [
+    {
+      "type": "instagram-image-prompts",
+      "path": "social/prompts/instagram/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "f1e353efc38b2c9537060622e07d3a1a0d1e15049646d3165154ffbbc5a696a6"
+    },
+    {
+      "type": "short-video-visual-prompts",
+      "path": "social/prompts/tiktok/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "3756119622cdb35bf66e404eba9ffbb069ea3dcfa61fa654a20f7e739665eb79"
+    },
+    {
+      "type": "pinterest-image-prompt",
+      "path": "social/prompts/pinterest/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "5e8f3de8ee61d34f75923296fe8e65568e36258a0385d8b6279c9718bd1bd8c7"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:48:48.359Z"
+}
