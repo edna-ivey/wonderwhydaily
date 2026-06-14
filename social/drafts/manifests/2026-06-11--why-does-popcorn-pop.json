@@ -1,0 +1,25 @@
+{
+  "type": "social-draft-set",
+  "wonderSlug": "why-does-popcorn-pop",
+  "publicationDate": "2026-06-11",
+  "canonicalUrl": "https://wonderwhydaily.com/wonders/why-does-popcorn-pop",
+  "drafts": [
+    {
+      "type": "instagram-carousel",
+      "path": "social/drafts/instagram/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "267f8a5b2eb26b9a040b92058b477f9dbc793a1e8478119691226170bbcf187c"
+    },
+    {
+      "type": "short-video",
+      "path": "social/drafts/tiktok/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "b9409775179d083a0b27fa0680db367d0244d2d088462ca46a13f39382a9ab96"
+    },
+    {
+      "type": "pinterest",
+      "path": "social/drafts/pinterest/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "6d5c2640adeecc451cdfd65cade52128beec01d89cf176b64a72da0308112cf4"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:24:02.036Z"
+}

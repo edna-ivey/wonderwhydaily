@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "newsletter:weekly": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/newsletter/generate-weekly-digest.ts"
+    "newsletter:weekly": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/newsletter/generate-weekly-digest.ts",
+    "social:wonder": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/social/generate-social-drafts.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.19",
