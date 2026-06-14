@@ -35,6 +35,19 @@ social/drafts/pinterest/YYYY-MM-DD--slug.md
 social/drafts/manifests/YYYY-MM-DD--slug.json
 ```
 
+## Generate Visual Prompts
+
+Generate review-only visual direction for the same published Wonder:
+
+```bash
+npm run social:prompts -- why-do-mirrors-reverse-left-and-right
+```
+
+Prompt files are written beneath `social/prompts/`. See
+`social/prompts/README.md` for quiz-first reveal and accessibility guardrails.
+The prompt generator does not generate images or contact Canva, image, or
+social APIs.
+
 ## Review Workflow
 
 1. Generate the draft set after the Wonder publishes.

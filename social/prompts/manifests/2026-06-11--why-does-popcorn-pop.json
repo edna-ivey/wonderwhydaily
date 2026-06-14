@@ -1,0 +1,24 @@
+{
+  "type": "social-image-prompt-set",
+  "wonderSlug": "why-does-popcorn-pop",
+  "publicationDate": "2026-06-11",
+  "promptFiles": [
+    {
+      "type": "instagram-image-prompts",
+      "path": "social/prompts/instagram/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "3e16489b8b7cc2e75ac7e2459a04caa55e1688a666ea7c6663b8450be81a6b78"
+    },
+    {
+      "type": "short-video-visual-prompts",
+      "path": "social/prompts/tiktok/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "e444c1e2c0d64547e9b6d6ecfc02fe67c9ac129ff7ec0a5a7a0a912c2710d414"
+    },
+    {
+      "type": "pinterest-image-prompt",
+      "path": "social/prompts/pinterest/2026-06-11--why-does-popcorn-pop.md",
+      "contentHash": "9a7fe25297ac9ec416e711edbc7a484dc99f171b77df943fd3e38c194376253a"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:48:48.356Z"
+}
