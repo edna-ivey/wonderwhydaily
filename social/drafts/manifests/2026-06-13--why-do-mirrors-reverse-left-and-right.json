@@ -1,0 +1,25 @@
+{
+  "type": "social-draft-set",
+  "wonderSlug": "why-do-mirrors-reverse-left-and-right",
+  "publicationDate": "2026-06-13",
+  "canonicalUrl": "https://wonderwhydaily.com/wonders/why-do-mirrors-reverse-left-and-right",
+  "drafts": [
+    {
+      "type": "instagram-carousel",
+      "path": "social/drafts/instagram/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "a7201bf7849e05d81b09374317d98b2813477492438fb73e598eb299172d35e7"
+    },
+    {
+      "type": "short-video",
+      "path": "social/drafts/tiktok/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "70312bbf391d5d4f0621d95749f0f62ebcc2124e4a18d4c2e2c8ddafc7a7fa44"
+    },
+    {
+      "type": "pinterest",
+      "path": "social/drafts/pinterest/2026-06-13--why-do-mirrors-reverse-left-and-right.md",
+      "contentHash": "b0b1a54e2f9abf5bcd2b9e56bed920c1c1bb201907f2ec243de49e8431fd18c7"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:24:02.036Z"
+}

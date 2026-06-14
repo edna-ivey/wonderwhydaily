@@ -1,0 +1,25 @@
+{
+  "type": "social-draft-set",
+  "wonderSlug": "why-do-bees-dance",
+  "publicationDate": "2026-06-06",
+  "canonicalUrl": "https://wonderwhydaily.com/wonders/why-do-bees-dance",
+  "drafts": [
+    {
+      "type": "instagram-carousel",
+      "path": "social/drafts/instagram/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "2ef37c57e170c772fb71b7e9f6208729dd09101bf39297df1a255f7506ca98f4"
+    },
+    {
+      "type": "short-video",
+      "path": "social/drafts/tiktok/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "1fd948bfc55088bd101dd45d570bf0dedc528ab8015560491193af77f8a6974d"
+    },
+    {
+      "type": "pinterest",
+      "path": "social/drafts/pinterest/2026-06-06--why-do-bees-dance.md",
+      "contentHash": "54898c281dbd80caa5cd42db4bc4ad9aa16b5900d8fa3c6d669b615d4da7faad"
+    }
+  ],
+  "status": "generated",
+  "generatedAt": "2026-06-14T02:24:02.036Z"
+}
