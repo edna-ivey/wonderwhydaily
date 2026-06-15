@@ -55,7 +55,7 @@ candidate titles are normalized to `Earth` in this Bible.
 
 As of the editorial date **June 10, 2026**, 13 Wonders are classified
 `Published`. All remaining 130 controlled Wonders now have publication dates
-and are classified `Scheduled`. Of those Scheduled Wonders, 76 are editorial
+and are classified `Scheduled`. Of those Scheduled Wonders, 57 are editorial
 plans that still require validated repository content before publication.
 
 ## Published Wonders
@@ -238,7 +238,7 @@ Scheduled Wonders table.
 
 ## Integrity Review
 
-- Repository Wonders represented: 88 of 88.
+- Repository Wonders represented: 107 of 107.
 - Scheduled titles represented: 130 of 130.
 - Approved candidate titles remaining: 0.
 - Exact or normalized duplicate titles: 0.
@@ -250,11 +250,11 @@ Scheduled Wonders table.
   appearances of a category within a rolling 14-day window.
 - The controlled schedule spans May 28, 2026 through October 17, 2026 with no
   unassigned dates.
-- Repository content now exists through the August 23, 2026 scheduled edition.
+- Repository content now exists through the September 11, 2026 scheduled edition.
 
 ## Current Editorial Concerns
 
-- The 55 Scheduled Wonders after August 23 require validated repository content
+- The 36 Scheduled Wonders after September 11 require validated repository content
   before their publication dates.
 - Ratings assigned to the newly Scheduled Wonders are editorial
   recommendations and should be confirmed during content production.
