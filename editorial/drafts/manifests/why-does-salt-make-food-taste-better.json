@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why does salt make food taste better?",
+  "slug": "why-does-salt-make-food-taste-better",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-does-salt-make-food-taste-better.json",
+  "draftPath": "editorial/drafts/wonders/why-does-salt-make-food-taste-better.mdx",
+  "contentHash": "d4e803164475ea21ab40477a691fcc6e7fea614e8d84f64c5f0a76dd10da4ded",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-15T05:26:40.429Z"
+}

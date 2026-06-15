@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why do astronauts train underwater?",
+  "slug": "why-do-astronauts-train-underwater",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-do-astronauts-train-underwater.json",
+  "draftPath": "editorial/drafts/wonders/why-do-astronauts-train-underwater.mdx",
+  "contentHash": "d59cc6b45f5adcc9bc7039da51754384598d83795e5be4bab8e34a1d7c9b3572",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-15T05:26:40.428Z"
+}

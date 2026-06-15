@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why do babies have more bones than adults?",
+  "slug": "why-do-babies-have-more-bones-than-adults",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-do-babies-have-more-bones-than-adults.json",
+  "draftPath": "editorial/drafts/wonders/why-do-babies-have-more-bones-than-adults.mdx",
+  "contentHash": "1ebeec018c0d3212d1db42d6ce5eaa8ce30a7fc23845d9151d2ea00b290f0111",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-15T05:26:40.429Z"
+}

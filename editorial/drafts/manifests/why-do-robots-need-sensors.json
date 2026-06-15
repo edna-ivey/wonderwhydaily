@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why do robots need sensors?",
+  "slug": "why-do-robots-need-sensors",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-do-robots-need-sensors.json",
+  "draftPath": "editorial/drafts/wonders/why-do-robots-need-sensors.mdx",
+  "contentHash": "17966569af9187a1bf55056b136a21656ede8e94fb3b4c1ef8bc7030dd20aa1b",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-15T05:26:20.578Z"
+}

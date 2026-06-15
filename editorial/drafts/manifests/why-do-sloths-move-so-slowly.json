@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why do sloths move so slowly?",
+  "slug": "why-do-sloths-move-so-slowly",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-do-sloths-move-so-slowly.json",
+  "draftPath": "editorial/drafts/wonders/why-do-sloths-move-so-slowly.mdx",
+  "contentHash": "65492b9f8d0ba850a4264f3bd3ebf3c81d4c1e0fbcdb9ef76556f6f8e620dc36",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-15T05:26:40.429Z"
+}

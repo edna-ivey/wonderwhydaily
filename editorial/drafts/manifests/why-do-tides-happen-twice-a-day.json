@@ -1,0 +1,13 @@
+{
+  "type": "wonder-editorial-draft",
+  "title": "Why do tides happen twice a day?",
+  "slug": "why-do-tides-happen-twice-a-day",
+  "bibleStatus": "Scheduled",
+  "sourcePath": "editorial/draft-sources/why-do-tides-happen-twice-a-day.json",
+  "draftPath": "editorial/drafts/wonders/why-do-tides-happen-twice-a-day.mdx",
+  "contentHash": "a15aaed36107f25dbc48fae2102c97c7a5a8dbebc88103a0284303a2877f09f5",
+  "status": "draft",
+  "needsFactReview": true,
+  "needsEditorialReview": true,
+  "generatedAt": "2026-06-14T03:20:16.884Z"
+}
