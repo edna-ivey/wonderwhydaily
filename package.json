@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "newsletter:weekly": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/newsletter/generate-weekly-digest.ts",
     "social:wonder": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/social/generate-social-drafts.ts",
-    "social:prompts": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/social/generate-image-prompts.ts"
+    "social:prompts": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/social/generate-image-prompts.ts",
+    "editorial:qa": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/editorial/validate-readiness.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.19",
