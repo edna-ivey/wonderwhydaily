@@ -1,0 +1,47 @@
+{
+  "title": "Why does cheese melt but not burn right away?",
+  "slug": "why-does-cheese-melt-but-not-burn-right-away",
+  "excerpt": "Many cheeses soften or melt while their moisture holds temperatures down, but the result depends on the cheese and the heat.",
+  "shortAnswer": "Many cheeses melt or soften before scorching because fat and proteins change as they warm while moisture keeps the surface cooler until it dries.",
+  "choices": [
+    "Moisture stays cool while fat and proteins change",
+    "Its fat forms a barrier that keeps oxygen away",
+    "Its proteins cannot burn until all the fat has melted"
+  ],
+  "correctAnswer": "Moisture stays cool while fat and proteins change",
+  "correctFeedback": "Exactly. Moisture slows the temperature rise while fat and proteins begin changing.",
+  "incorrectFeedback": "A smart guess. Many cheeses soften first because moisture, fat, and proteins respond to heat before the surface scorches.",
+  "coolFact": "Fresh mozzarella, aged cheddar, and paneer can behave very differently under heat because their moisture, acidity, and protein structures differ.",
+  "tryItYourself": "With an adult, place equal small pieces of mozzarella and cheddar on separate crackers and warm them briefly. Compare how smoothly each cheese melts and browns.",
+  "takeaway": "Many cheeses soften before scorching, but moisture and protein structure decide whether a cheese stretches, oils, browns, or holds its shape.",
+  "related": [
+    "why-does-chocolate-melt-in-your-mouth",
+    "why-do-eggs-change-when-cooked",
+    "why-does-bread-rise"
+  ],
+  "explanation": "A slice of cheese can slump into a glossy puddle before dark spots appear, but not every cheese performs that trick. Some stretch, some leak oil, some hold their shape, and some begin browning before they melt smoothly.\n\nCheese is a mixture of water, fat, proteins, salt, and other compounds. As many cheeses warm, fat begins to liquefy and the protein network holding everything together loosens. That lets the cheese soften or flow.\n\nMoisture changes the timing. Water in food cannot become much hotter than its boiling point while it remains liquid. As moisture absorbs heat and escapes as steam, it helps keep the cheese from racing immediately toward scorching temperatures. Once the surface becomes drier, it can grow hotter and begin browning. With enough heat and time, browned areas can char.\n\nThe exact result depends on the cheese. Moist mozzarella often melts and stretches. Aged cheeses may release oil or brown more quickly. Acid-set cheeses such as paneer can keep much of their shape because their proteins are connected differently.\n\nCheese therefore does not follow one universal melt-before-burn rule. Heat starts several changes at once, and the cheese's moisture and structure decide which transformation wins the race.",
+  "factReviewNotes": [
+    "Verify the roles of moisture, fat, protein structure, acidity, and age across multiple cheese styles.",
+    "Confirm the distinction among softening, melting, browning, scorching, and burning.",
+    "Review the activity for safe heating instructions and allergy considerations."
+  ],
+  "channels": {
+    "email": {
+      "subject": "Today's Wonder: Why does cheese melt before it burns?",
+      "preheader": "Many cheeses soften or melt while their moisture holds temperatures down, but the result depends on the cheese and the heat.",
+      "teaser": "Pause and make a guess: Why does cheese melt but not burn right away? Many cheeses soften or melt while their moisture holds temperatures down, but the result depends on the cheese and the heat."
+    },
+    "social": {
+      "hook": "Many cheeses soften or melt while their moisture holds temperatures down, but the result depends on the cheese and the heat.",
+      "carouselBeats": [
+        "Why does cheese melt but not burn right away?",
+        "Many cheeses melt or soften before scorching because fat and proteins change as they warm while moisture keeps the surface cooler until it dries.",
+        "Many cheeses soften before scorching, but moisture and protein structure decide whether a cheese stretches, oils, browns, or holds its shape."
+      ],
+      "shortVideoHook": "Why does cheese melt but not burn right away?",
+      "shortVideoPayoff": "Many cheeses melt or soften before scorching because fat and proteins change as they warm while moisture keeps the surface cooler until it dries.",
+      "pinterestTitle": "Why does cheese melt but not burn right away? | Wonder Why Daily",
+      "pinterestDescription": "Many cheeses soften or melt while their moisture holds temperatures down, but the result depends on the cheese and the heat. Discover the answer with Wonder Why Daily."
+    }
+  }
+}

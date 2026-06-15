@@ -1,0 +1,47 @@
+{
+  "title": "Why do waterfalls never run out of water?",
+  "slug": "why-do-waterfalls-never-run-out-of-water",
+  "excerpt": "A waterfall is a place in a flowing river, constantly supplied by water moving through a larger watershed.",
+  "shortAnswer": "Waterfalls keep flowing when rivers and watersheds continually replace the water falling over the edge.",
+  "choices": [
+    "A river keeps delivering new water to the edge",
+    "The falling water is pulled underground and returned to the top",
+    "Water stored behind the cliff leaks out at a fixed rate"
+  ],
+  "correctAnswer": "A river keeps delivering new water to the edge",
+  "correctFeedback": "Exactly. The waterfall stays in place while fresh river water keeps moving through it.",
+  "incorrectFeedback": "Fun guess. A waterfall is really one steep moment in a constantly moving river.",
+  "coolFact": "Some waterfalls slowly move upstream because rushing water erodes softer rock beneath harder layers.",
+  "tryItYourself": "Pour water slowly down a tilted tray with a book beneath one section. Watch how the flow drops at the sudden change in height while new water keeps arriving.",
+  "related": [
+    "why-do-rivers-curve",
+    "why-are-oceans-salty",
+    "why-are-mountains-so-tall"
+  ],
+  "takeaway": "A waterfall does not reuse one supply; it is a dramatic step in water's continuous journey through a watershed.",
+  "factReviewNotes": [
+    "Verify watershed and river-flow explanations across rain-fed, snow-fed, and spring-fed waterfalls.",
+    "Clarify that many waterfalls shrink or stop during dry periods.",
+    "Confirm the upstream-retreat erosion example."
+  ],
+  "explanation": "A waterfall can pour over a cliff all day with enough water to fill swimming pools, yet the edge never seems to empty. That is because a waterfall is not a container. It is one dramatic place along a moving river.\n\nThe water arriving at the top comes from a watershed, the area of land that drains toward the river. Rain, melting snow, springs, lakes, and smaller streams can all feed that flow. Gravity keeps pulling the water downhill until the river reaches a sudden drop and becomes a waterfall.\n\nThe water you see at noon is not the water you saw that morning. Each splash continues downstream while new water takes its place. Farther along, some of it may reach lakes or oceans, evaporate, form clouds, and eventually return as precipitation. The larger water cycle keeps the journey going.\n\nWaterfalls are not guaranteed to run forever. During droughts or dry seasons, some shrink to a trickle or stop completely. Rivers can change course, dams can redirect water, and erosion can reshape the drop itself.\n\nSo a waterfall is less like a faucet connected to an endless tank and more like a busy stair in a river's path. The stair stays put for a while. The travelers never do.",
+  "channels": {
+    "email": {
+      "subject": "Today's Wonder: Why do waterfalls never run out of water?",
+      "preheader": "A waterfall is a place in a flowing river, constantly supplied by water moving through a larger watershed.",
+      "teaser": "Pause and make a guess: Why do waterfalls never run out of water? A waterfall is a place in a flowing river, constantly supplied by water moving through a larger watershed."
+    },
+    "social": {
+      "hook": "A waterfall is a place in a flowing river, constantly supplied by water moving through a larger watershed.",
+      "carouselBeats": [
+        "Why do waterfalls never run out of water?",
+        "Waterfalls keep flowing when rivers and watersheds continually replace the water falling over the edge.",
+        "A waterfall does not reuse one supply; it is a dramatic step in water's continuous journey through a watershed."
+      ],
+      "shortVideoHook": "Why do waterfalls never run out of water?",
+      "shortVideoPayoff": "Waterfalls keep flowing when rivers and watersheds continually replace the water falling over the edge.",
+      "pinterestTitle": "Why do waterfalls never run out of water? | Wonder Why Daily",
+      "pinterestDescription": "A waterfall is a place in a flowing river, constantly supplied by water moving through a larger watershed. Discover the answer with Wonder Why Daily."
+    }
+  }
+}
