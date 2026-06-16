@@ -10,10 +10,30 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    ignores: [".next/**", "next-env.d.ts", "node_modules/**"],
+    ignores: [
+      ".next/**",
+      "**/.next/**",
+      ".worktrees/**",
+      "**/.worktrees/**",
+      "node_modules/**",
+      "**/node_modules/**",
+      "out/**",
+      "**/out/**",
+      "dist/**",
+      "**/dist/**",
+      "build/**",
+      "**/build/**",
+      ".vercel/**",
+      "**/.vercel/**",
+      "coverage/**",
+      "**/coverage/**",
+      "*.tsbuildinfo",
+      "**/*.tsbuildinfo",
+      "next-env.d.ts",
+    ],
   },
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
 export default eslintConfig;
