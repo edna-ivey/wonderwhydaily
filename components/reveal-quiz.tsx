@@ -35,11 +35,9 @@ export function RevealQuiz({
   return (
     <>
       <section className="quiz-panel" aria-labelledby="quiz-heading">
-        <p className="section-kicker">Before you peek</p>
+        <p className="section-kicker">Take a Guess</p>
         <h2 id="quiz-heading">What do you think?</h2>
-        <p className="quiz-instruction">
-          Make a guess. This is curiosity, not a test.
-        </p>
+        <p className="quiz-instruction">Pick the answer that feels most likely.</p>
         <div className="choice-list">
           {choices.map((choice) => {
             const isSelected = selected === choice;
@@ -84,14 +82,14 @@ export function RevealQuiz({
             tabIndex={-1}
           >
             <p className="answer-result">
-              {selected === correctAnswer ? "Your guess was right" : "Not quite"}
+              {selected === correctAnswer ? "You got it" : "Not quite"}
             </p>
             <p className="answer-feedback">
               {selected === correctAnswer ? correctFeedback : incorrectFeedback}
             </p>
             <p className="answer-copy">{shortAnswer}</p>
             <a className="text-link" href="#explanation">
-              Continue to the explanation <span aria-hidden="true">↓</span>
+              Read the why <span aria-hidden="true">↓</span>
             </a>
           </div>
         )}

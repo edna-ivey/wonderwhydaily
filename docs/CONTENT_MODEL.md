@@ -148,6 +148,14 @@ Those systems remain deliberately unimplemented in Milestone 1.5.
   within 150-320 words.
 - Open with a hook, use a vivid mental image or analogy, answer the question,
   and end with a satisfying payoff.
+- Start from the weird thing the reader can notice. Do not narrate like a
+  children's educational host. Whenever possible, begin with an observation,
+  situation, or question the reader recognizes, then invite them into the
+  explanation.
+- Watch for repeated AI/template phrases across Wonders, including "which
+  sounds impossible," "basically," "here's where it gets interesting," "and
+  that's not all," and generic "tiny and boring" setups. These phrases are not
+  banned individually, but recurring formulaic use should be revised.
 - Include at least one sentence that remains fascinating even when the reader
   already knows the basic answer.
 - Keep Cool Fact independent from the explanation.

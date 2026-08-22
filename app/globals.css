@@ -534,8 +534,7 @@ button {
 .intro-strip h2,
 .section-heading h2,
 .category-band h2,
-.quiz-panel h2,
-.takeaway-card h2 {
+.quiz-panel h2 {
   font-family: var(--font-display);
   font-size: clamp(2.3rem, 7vw, 4.7rem);
   letter-spacing: -0.055em;
@@ -1156,37 +1155,41 @@ button {
   line-height: 1;
 }
 
-.takeaway-grid {
-  display: grid;
-  gap: 20px;
+.wow-fact-card,
+.curiosity-chain {
   margin-block: 100px;
-}
-
-.takeaway-card {
-  min-height: 320px;
   overflow: hidden;
   padding: 28px;
   position: relative;
 }
 
-.cool-fact {
+.wow-fact-card {
   background: var(--lime);
 }
 
-.try-it {
+.curiosity-chain {
   background: var(--lavender);
+  margin-top: -72px;
 }
 
-.takeaway-card .section-kicker {
+.wow-fact-card .section-kicker,
+.curiosity-chain .section-kicker {
   color: var(--ink);
 }
 
-.takeaway-card h2 {
+.wow-fact-card h2,
+.curiosity-chain h2 {
+  font-family: var(--font-display);
   font-size: 2.5rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin: 0;
   max-width: 300px;
 }
 
-.takeaway-card > p:last-child {
+.wow-fact-card > p:last-child {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
   line-height: 1.7;
   margin-top: 22px;
   max-width: 430px;
@@ -1194,15 +1197,8 @@ button {
   z-index: 2;
 }
 
-.takeaway-number {
-  bottom: -50px;
-  color: rgba(23, 34, 28, 0.08);
-  font-family: var(--font-display);
-  font-size: 14rem;
-  font-weight: 800;
-  line-height: 1;
-  position: absolute;
-  right: -5px;
+.curiosity-chain .button {
+  margin-top: 24px;
 }
 
 .related-section {
@@ -1493,10 +1489,6 @@ button {
 
   .quiz-panel {
     padding: 44px;
-  }
-
-  .takeaway-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .growth-foundation {

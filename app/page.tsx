@@ -9,6 +9,7 @@ import {
   getCategories,
   getEditorialDate,
   getTodaysWonder,
+  getWonderTeaser,
 } from "@/lib/wonders";
 
 export const dynamic = "force-dynamic";
@@ -28,10 +29,10 @@ export default function Home() {
               <span className="category-pill">Today&apos;s Wonder</span>
               <time dateTime={today.date}>{formatWonderDate(today.date)}</time>
             </div>
-            <h1>{today.title}</h1>
-            <p className="hero-excerpt">{today.excerpt}</p>
+            <h1>{today.question}</h1>
+            <p className="hero-excerpt">{getWonderTeaser(today)}</p>
             <Link className="button button-light" href={`/wonders/${today.slug}`}>
-              Find out why <span aria-hidden="true">-&gt;</span>
+              Take a guess <span aria-hidden="true">-&gt;</span>
             </Link>
           </div>
           <WonderArt accent={today.accent} category={today.category} />

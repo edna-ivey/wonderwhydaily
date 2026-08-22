@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { categorySlug, formatWonderDate, type Wonder } from "@/lib/wonders";
+import {
+  categorySlug,
+  formatWonderDate,
+  getWonderTeaser,
+  type Wonder,
+} from "@/lib/wonders";
 import { WonderArt } from "@/components/wonder-art";
 
 export function WonderCard({
@@ -32,9 +37,9 @@ export function WonderCard({
         <h2>
           <Link href={`/wonders/${wonder.slug}`}>{wonder.title}</Link>
         </h2>
-        <p>{wonder.excerpt}</p>
+        <p>{getWonderTeaser(wonder)}</p>
         <Link className="text-link" href={`/wonders/${wonder.slug}`}>
-          Keep your curiosity going <span aria-hidden="true">-&gt;</span>
+          Take a guess <span aria-hidden="true">-&gt;</span>
         </Link>
       </div>
     </article>

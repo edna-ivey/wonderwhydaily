@@ -21,6 +21,12 @@ editorial date, while the homepage displays current and longest streaks.
 The streak uses the same configured editorial date as Wonder publishing. A
 future authenticated version can migrate this small record to a user profile.
 
+## Existing Future Issue
+
+- Wonder ratings are currently editorial labels only. There is no user-facing
+  rating or vote control yet; add that interaction intentionally in a future
+  milestone if ratings are meant to capture reader feedback.
+
 ## Discoverability
 
 - Related Wonders prefer published questions from the same category and show

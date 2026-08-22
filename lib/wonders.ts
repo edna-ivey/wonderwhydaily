@@ -6,6 +6,7 @@ const wondersDirectory = path.join(process.cwd(), "content/wonders");
 const earliestPublicationDate = "2026-05-28";
 const minimumExplanationWords = 150;
 const maximumExplanationWords = 320;
+const neutralTeaser = "Think you know why? Take a guess before you find out.";
 const rejectedEditorialPhrases = [
   "Researchers compare",
   "A careful observer would",
@@ -96,8 +97,30 @@ export type WonderChannels = {
   };
 };
 
+export type CuriosityChain = {
+  question: string;
+  relatedSlug?: string;
+};
+
 export type Wonder = {
   slug: string;
+  /**
+   * Canonical WWD 2.0 fields. New and rewritten Wonders should use these
+   * fields as the source of truth for the public experience.
+   */
+  question: string;
+  teaser?: string;
+  guessChoices: string[];
+  correctAnswer: string;
+  wowFact: string;
+  curiosityChain?: CuriosityChain;
+  explanation: string;
+
+  /**
+   * Legacy migration aliases. Keep these while older content files and
+   * editorial/social scripts still read the pre-2.0 names. Do not use them for
+   * homepage, archive, or pre-reveal Wonder copy.
+   */
   title: string;
   date: string;
   category: CategoryName;
@@ -105,7 +128,6 @@ export type Wonder = {
   excerpt: string;
   shortAnswer: string;
   choices: string[];
-  correctAnswer: string;
   correctFeedback: string;
   incorrectFeedback: string;
   coolFact: string;
@@ -117,7 +139,7 @@ export type Wonder = {
   content: string;
 };
 
-type Frontmatter = Omit<Wonder, "slug" | "content">;
+type Frontmatter = Omit<Wonder, "slug" | "content" | "explanation">;
 
 function assertString(value: unknown, field: string, filename: string): string {
   if (typeof value !== "string" || value.trim().length === 0) {
@@ -144,6 +166,78 @@ function assertStringArray(
   return value;
 }
 
+function assertOptionalString(
+  value: unknown,
+  field: string,
+  filename: string,
+): string | undefined {
+  if (value === undefined || value === null) return undefined;
+
+  return assertString(value, field, filename);
+}
+
+function parseCuriosityChain(
+  value: unknown,
+  filename: string,
+): CuriosityChain | undefined {
+  if (value === undefined || value === null) return undefined;
+
+  if (typeof value === "string") {
+    return { question: assertString(value, "curiosityChain", filename) };
+  }
+
+  if (typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(
+      `${filename}: "curiosityChain" must be a string or an object with a question.`,
+    );
+  }
+
+  const chain = value as Record<string, unknown>;
+  const relatedSlug = assertOptionalString(
+    chain.relatedSlug,
+    "curiosityChain.relatedSlug",
+    filename,
+  );
+
+  return {
+    question: assertString(chain.question, "curiosityChain.question", filename),
+    ...(relatedSlug ? { relatedSlug } : {}),
+  };
+}
+
+function normalizePreviewText(value: string): string {
+  return value
+    .toLocaleLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function assertTeaserDoesNotReuseAnswer({
+  correctAnswer,
+  filename,
+  shortAnswer,
+  teaser,
+}: {
+  correctAnswer: string;
+  filename: string;
+  shortAnswer: string;
+  teaser?: string;
+}) {
+  if (!teaser) return;
+
+  const normalizedTeaser = normalizePreviewText(teaser);
+  const protectedAnswerText = [correctAnswer, shortAnswer]
+    .map(normalizePreviewText)
+    .filter((item) => item.length >= 16);
+
+  if (protectedAnswerText.some((answer) => normalizedTeaser.includes(answer))) {
+    throw new Error(
+      `${filename}: "teaser" must create curiosity without reusing the answer text.`,
+    );
+  }
+}
+
 function parseFrontmatter(data: Record<string, unknown>, filename: string): Frontmatter {
   const category = assertString(data.category, "category", filename);
   const categoryDefinition = categoryDefinitions.find((item) => item.name === category);
@@ -162,11 +256,21 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
     );
   }
 
-  const choices = assertStringArray(data.choices, "choices", filename, 2);
+  const question = assertString(data.question ?? data.title, "question", filename);
+  const teaser = assertOptionalString(data.teaser, "teaser", filename);
+  const choices = assertStringArray(
+    data.guessChoices ?? data.choices,
+    data.guessChoices ? "guessChoices" : "choices",
+    filename,
+    2,
+  );
   const correctAnswer = assertString(data.correctAnswer, "correctAnswer", filename);
+  const shortAnswer = assertString(data.shortAnswer ?? correctAnswer, "shortAnswer", filename);
+  const wowFact = assertString(data.wowFact ?? data.coolFact, "wowFact", filename);
+  const curiosityChain = parseCuriosityChain(data.curiosityChain, filename);
 
   if (!choices.includes(correctAnswer)) {
-    throw new Error(`${filename}: "correctAnswer" must match one of the choices.`);
+    throw new Error(`${filename}: "correctAnswer" must match one of the guess choices.`);
   }
 
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
@@ -180,8 +284,15 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
   }
 
   if (choices.length !== 3 || new Set(choices).size !== 3) {
-    throw new Error(`${filename}: "choices" must contain exactly three unique answers.`);
+    throw new Error(`${filename}: "guessChoices" must contain exactly three unique answers.`);
   }
+
+  assertTeaserDoesNotReuseAnswer({
+    correctAnswer,
+    filename,
+    shortAnswer,
+    teaser,
+  });
 
   const channels = data.channels as Record<string, unknown> | undefined;
   const email = channels?.email as Record<string, unknown> | undefined;
@@ -192,12 +303,15 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
   }
 
   return {
-    title: assertString(data.title, "title", filename),
+    question,
+    title: assertString(data.title ?? question, "title", filename),
     date,
     category: categoryDefinition.name,
     rating: rating as WonderRating,
-    excerpt: assertString(data.excerpt, "excerpt", filename),
-    shortAnswer: assertString(data.shortAnswer, "shortAnswer", filename),
+    ...(teaser ? { teaser } : {}),
+    excerpt: assertString(data.excerpt ?? teaser ?? neutralTeaser, "excerpt", filename),
+    guessChoices: choices,
+    shortAnswer,
     choices,
     correctAnswer,
     correctFeedback: assertString(data.correctFeedback, "correctFeedback", filename),
@@ -206,8 +320,10 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
       "incorrectFeedback",
       filename,
     ),
-    coolFact: assertString(data.coolFact, "coolFact", filename),
+    wowFact,
+    coolFact: wowFact,
     tryItYourself: assertString(data.tryItYourself, "tryItYourself", filename),
+    ...(curiosityChain ? { curiosityChain } : {}),
     related: assertStringArray(data.related ?? [], "related", filename),
     accent: assertString(data.accent ?? categoryDefinition.accent, "accent", filename),
     takeaway: assertString(data.takeaway, "takeaway", filename),
@@ -294,8 +410,21 @@ function readWonder(filename: string): Wonder {
   return {
     slug,
     ...parseFrontmatter(data, filename),
+    explanation: content,
     content,
   };
+}
+
+export function getWonderTeaser(wonder: Wonder): string {
+  return wonder.teaser ?? neutralTeaser;
+}
+
+export function getCuriosityChainTarget(wonder: Wonder): Wonder | undefined {
+  const relatedSlug = wonder.curiosityChain?.relatedSlug;
+
+  if (!relatedSlug) return undefined;
+
+  return getAllWonders().find((item) => item.slug === relatedSlug);
 }
 
 function getEditorialTimeZone(): string {

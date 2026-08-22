@@ -190,23 +190,27 @@ function validateBible(entries: BibleEntry[]) {
   }
 }
 
-function nonEmpty(value: unknown): boolean {
+function nonEmpty(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+function normalizedPreviewText(value: string): string {
+  return value
+    .toLocaleLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function validateWonderMetadata(wonders: WonderRecord[]) {
   const slugs = new Set(wonders.map((wonder) => wonder.slug));
   const requiredStrings = [
-    "title",
     "date",
     "category",
     "rating",
-    "excerpt",
-    "shortAnswer",
     "correctAnswer",
     "correctFeedback",
     "incorrectFeedback",
-    "coolFact",
     "tryItYourself",
     "takeaway",
   ];
@@ -220,8 +224,19 @@ function validateWonderMetadata(wonders: WonderRecord[]) {
 
     const category = wonder.data.category;
     const rating = wonder.data.rating;
-    const choices = wonder.data.choices;
+    const question = wonder.data.question ?? wonder.data.title;
+    const teaser = wonder.data.teaser;
+    const choices = wonder.data.guessChoices ?? wonder.data.choices;
     const related = wonder.data.related;
+    const wowFact = wonder.data.wowFact ?? wonder.data.coolFact;
+    const hasWwd2Fields = [
+      "question",
+      "teaser",
+      "guessChoices",
+      "wowFact",
+      "curiosityChain",
+    ].some((field) => wonder.data[field] !== undefined);
+    const curiosityChain = wonder.data.curiosityChain;
     const channels = wonder.data.channels as Record<string, unknown> | undefined;
     const email = channels?.email as Record<string, unknown> | undefined;
     const social = channels?.social as Record<string, unknown> | undefined;
@@ -239,6 +254,40 @@ function validateWonderMetadata(wonders: WonderRecord[]) {
       !choices.includes(wonder.data.correctAnswer)
     ) {
       report("Wonder metadata", "error", `${wonder.filename} has an invalid three-choice quiz.`);
+    }
+    if (!nonEmpty(question)) {
+      report("Wonder metadata", "error", `${wonder.filename} is missing "question".`);
+    }
+    if (!nonEmpty(wowFact)) {
+      report("Wonder metadata", "error", `${wonder.filename} is missing "wowFact".`);
+    }
+    if (hasWwd2Fields) {
+      for (const field of ["question", "teaser", "guessChoices", "wowFact", "curiosityChain"]) {
+        if (wonder.data[field] === undefined) {
+          report("Wonder metadata", "error", `${wonder.filename} WWD 2.0 pilot is missing "${field}".`);
+        }
+      }
+      if (!nonEmpty(teaser)) {
+        report("Wonder metadata", "error", `${wonder.filename} has no WWD 2.0 teaser.`);
+      } else {
+        const normalizedTeaser = normalizedPreviewText(teaser);
+        const answerText = [wonder.data.correctAnswer, wonder.data.shortAnswer]
+          .filter((value): value is string => typeof value === "string")
+          .map(normalizedPreviewText)
+          .filter((value) => value.length >= 16);
+
+        if (answerText.some((answer) => normalizedTeaser.includes(answer))) {
+          report("Wonder metadata", "error", `${wonder.filename} teaser appears to reuse answer text.`);
+        }
+      }
+      if (
+        !nonEmpty(curiosityChain) &&
+        (typeof curiosityChain !== "object" ||
+          Array.isArray(curiosityChain) ||
+          !nonEmpty((curiosityChain as Record<string, unknown>).question))
+      ) {
+        report("Wonder metadata", "error", `${wonder.filename} has an invalid curiosityChain.`);
+      }
     }
     if (!Array.isArray(related) || related.some((slug) => typeof slug !== "string")) {
       report("Wonder metadata", "error", `${wonder.filename} has an invalid related list.`);
@@ -279,7 +328,9 @@ function validateWonderMetadata(wonders: WonderRecord[]) {
 function validateCoverage(entries: BibleEntry[], wonders: WonderRecord[], today: string) {
   const bibleByTitle = new Map(entries.map((entry) => [normalizeTitle(entry.title), entry]));
   const bibleByDate = new Map(entries.flatMap((entry) => (entry.date ? [[entry.date, entry] as const] : [])));
-  const wonderTitles = wonders.map((wonder) => normalizeTitle(String(wonder.data.title ?? "")));
+  const wonderTitles = wonders.map((wonder) =>
+    normalizeTitle(String(wonder.data.question ?? wonder.data.title ?? "")),
+  );
   const wonderDates = wonders.map((wonder) => String(wonder.data.date ?? ""));
 
   for (const title of duplicates(wonderTitles)) {
@@ -290,7 +341,7 @@ function validateCoverage(entries: BibleEntry[], wonders: WonderRecord[], today:
   }
 
   for (const wonder of wonders) {
-    const title = normalizeTitle(String(wonder.data.title ?? ""));
+    const title = normalizeTitle(String(wonder.data.question ?? wonder.data.title ?? ""));
     const date = String(wonder.data.date ?? "");
     if (!bibleByTitle.has(title)) {
       report("Wonder coverage", "error", `${wonder.filename} is orphaned from the Wonder Bible.`);

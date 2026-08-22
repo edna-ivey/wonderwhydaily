@@ -7,12 +7,15 @@ import { WonderCard } from "@/components/wonder-card";
 import {
   categorySlug,
   formatWonderDate,
+  getCuriosityChainTarget,
   getRelatedWonders,
+  getWonderTeaser,
   type Wonder,
 } from "@/lib/wonders";
 
 export function WonderDetail({ wonder }: { wonder: Wonder }) {
   const related = getRelatedWonders(wonder);
+  const curiosityChainTarget = getCuriosityChainTarget(wonder);
   const wonderUrl = `https://wonderwhydaily.com/wonders/${wonder.slug}`;
 
   return (
@@ -31,8 +34,8 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
               <time dateTime={wonder.date}>{formatWonderDate(wonder.date)}</time>
             </div>
             <p className="hero-kicker">Today&apos;s Wonder</p>
-            <h1>{wonder.title}</h1>
-            <p className="hero-excerpt">{wonder.excerpt}</p>
+            <h1>{wonder.question}</h1>
+            <p className="hero-excerpt">{getWonderTeaser(wonder)}</p>
           </div>
           <WonderArt accent={wonder.accent} category={wonder.category} />
         </div>
@@ -40,35 +43,40 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
 
       <div className="reading-shell wonder-main">
         <RevealQuiz
-          choices={wonder.choices}
+          choices={wonder.guessChoices}
           correctAnswer={wonder.correctAnswer}
           correctFeedback={wonder.correctFeedback}
           incorrectFeedback={wonder.incorrectFeedback}
-          shortAnswer={wonder.shortAnswer}
+          shortAnswer={wonder.correctAnswer}
         >
           <article className="explanation" id="explanation">
-            <p className="section-kicker">The explanation</p>
-            <MDXRemote source={wonder.content} />
+            <p className="section-kicker">The why</p>
+            <MDXRemote source={wonder.explanation} />
           </article>
 
-          <div className="takeaway-grid">
-            <aside className="takeaway-card cool-fact">
-              <span className="takeaway-number" aria-hidden="true">
-                01
-              </span>
-              <p className="section-kicker">Cool fact</p>
-              <h2>One more thing</h2>
-              <p>{wonder.coolFact}</p>
-            </aside>
-            <aside className="takeaway-card try-it">
-              <span className="takeaway-number" aria-hidden="true">
-                02
-              </span>
-              <p className="section-kicker">Try it yourself</p>
-              <h2>Notice it in the wild</h2>
-              <p>{wonder.tryItYourself}</p>
-            </aside>
-          </div>
+          <aside className="wow-fact-card" aria-labelledby="wow-fact-heading">
+            <p className="section-kicker">WAIT... WHAT?</p>
+            <h2 id="wow-fact-heading">One more weird little door</h2>
+            <p>{wonder.wowFact}</p>
+          </aside>
+
+          {wonder.curiosityChain ? (
+            <section
+              className="curiosity-chain"
+              aria-labelledby="curiosity-chain-heading"
+            >
+              <p className="section-kicker">Now you&apos;re probably wondering...</p>
+              <h2 id="curiosity-chain-heading">{wonder.curiosityChain.question}</h2>
+              {curiosityChainTarget ? (
+                <Link
+                  className="button button-dark"
+                  href={`/wonders/${curiosityChainTarget.slug}`}
+                >
+                  Follow that question <span aria-hidden="true">-&gt;</span>
+                </Link>
+              ) : null}
+            </section>
+          ) : null}
 
           <ShareWonder title={wonder.title} url={wonderUrl} />
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { WonderDetail } from "@/components/wonder-detail";
-import { getWonder } from "@/lib/wonders";
+import { getWonder, getWonderTeaser } from "@/lib/wonders";
 
 export const dynamic = "force-dynamic";
 
@@ -15,15 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!wonder) return {};
 
+  const teaser = getWonderTeaser(wonder);
+
   return {
-    title: wonder.title,
-    description: wonder.excerpt,
+    title: wonder.question,
+    description: teaser,
     alternates: {
       canonical: `/wonders/${wonder.slug}`,
     },
     openGraph: {
-      title: wonder.title,
-      description: wonder.excerpt,
+      title: wonder.question,
+      description: teaser,
       siteName: "Wonder Why Daily",
       type: "article",
       publishedTime: wonder.date,
@@ -41,8 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: wonder.title,
-      description: wonder.excerpt,
+      title: wonder.question,
+      description: teaser,
       images: [`/wonders/${wonder.slug}/opengraph-image`],
     },
   };
@@ -55,12 +57,13 @@ export default async function WonderPage({ params }: Props) {
   if (!wonder) notFound();
 
   const wonderUrl = `https://wonderwhydaily.com/wonders/${wonder.slug}`;
+  const teaser = getWonderTeaser(wonder);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
     datePublished: wonder.date,
-    description: wonder.excerpt,
-    headline: wonder.title,
+    description: teaser,
+    headline: wonder.question,
     image: `${wonderUrl}/opengraph-image`,
     mainEntityOfPage: wonderUrl,
     publisher: {

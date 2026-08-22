@@ -53,7 +53,7 @@ export default async function OpenGraphImage({
             maxWidth: 980,
           }}
         >
-          {wonder.title}
+          {wonder.question}
         </div>
         <div
           style={{
