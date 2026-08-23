@@ -5,7 +5,7 @@ import { categorySlug, getAllWonders, getCategories } from "@/lib/wonders";
 
 export const metadata: Metadata = {
   title: "Wonder Archive",
-  description: "Explore every fascinating question from Wonder Why Daily.",
+  description: "Explore every Wonder Why Daily question so far.",
 };
 
 type Props = {
@@ -35,8 +35,7 @@ export default async function ArchivePage({ searchParams }: Props) {
         <p className="section-kicker">Every question so far</p>
         <h1>Wonder archive</h1>
         <p>
-          A growing collection of ordinary questions with extraordinary
-          answers.
+          All the questions we have stopped to poke, prod, and ask about so far.
         </p>
       </header>
       <nav className="wide-shell archive-filters" aria-label="Filter Wonder archive">

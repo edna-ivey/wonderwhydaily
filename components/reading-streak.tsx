@@ -59,8 +59,8 @@ export function ReadingStreak({
   return (
     <aside className="reading-streak" aria-label="Your reading streak">
       <div>
-        <p className="section-kicker">Your curiosity habit</p>
-        <p className="reading-streak-note">A quiet record of days you stopped to wonder.</p>
+        <p className="section-kicker">Your wonder trail</p>
+        <p className="reading-streak-note">Days you showed up to ask one more question.</p>
       </div>
       <dl>
         <div>

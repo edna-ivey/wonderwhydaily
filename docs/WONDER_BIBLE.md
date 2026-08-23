@@ -114,14 +114,14 @@ plans that still require validated repository content before publication.
 | 2026-07-11 | Why do volcanoes erupt? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-12 | Why did people once believe the Earth was the center of the universe? | History | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-07-13 | Why do we talk to pets like they understand us? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-07-14 | Why is space completely silent? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-07-14 | Why can't sound travel through empty space? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-15 | Why does pineapple make your tongue feel weird? | Food | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-07-16 | Why do sharks never run out of teeth? | Animals | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-07-17 | Why do we get goosebumps? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-07-18 | Why does your phone know where you are? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-19 | Why do apples float in water? | Food | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-07-20 | Why do lightning bolts zigzag? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-07-21 | Why does the moon look bigger near the horizon? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-07-21 | Why does the Moon look bigger near the horizon? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-22 | Why do fireflies glow? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-23 | Why do spicy foods make your nose run? | Food | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-07-24 | Why can't you tickle yourself? | Human Body | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
@@ -129,7 +129,7 @@ plans that still require validated repository content before publication.
 | 2026-07-26 | Why were Viking ships so successful? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-07-27 | Why can a shrimp's punch create a flash of light? | Weird & Wonderful | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-07-28 | Why are some lakes pink? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-07-29 | Why is honey one of the only foods that never spoils? | Food | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
+| 2026-07-29 | Why does honey last so long? | Food | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-07-30 | Why is Venus hotter than Mercury even though Mercury is closer to the Sun? | Space | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-07-31 | Why do flamingos stand on one leg? | Animals | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-01 | Why do we have fingerprints? | Human Body | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
@@ -137,7 +137,7 @@ plans that still require validated repository content before publication.
 | 2026-08-03 | Why do QR codes work even when part of them is damaged? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-04 | Why did people think tomatoes were poisonous? | History | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-05 | Why do boomerangs come back? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-08-06 | Why do some fruits have seeds on the outside? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-08-06 | Why do strawberries look like they have seeds on the outside? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-07 | Why are some beaches black? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-08 | Why are astronauts taller in space? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-09 | Why do dolphins sleep with one eye open? | Animals | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
@@ -152,28 +152,28 @@ plans that still require validated repository content before publication.
 | 2026-08-18 | Why do zebras have stripes? | Animals | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-19 | Why do we blush when we're embarrassed? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-20 | Why does bread have holes in it? | Food | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-08-21 | Why can a tiny microchip hold so much information? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-08-22 | Why did knights wear heavy armor? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-08-21 | How can a tiny memory chip hold so much information? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-08-22 | Why did knights wear so much armor? | History | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-23 | Why can some people wiggle their ears? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-08-24 | Why do tides happen twice a day? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-08-24 | Why do many places get two high tides a day? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-25 | Why are there footprints on the Moon that may last millions of years? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-08-26 | Why does cheese melt but not burn right away? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-08-26 | Why do many cheeses melt before they burn? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-27 | Why can parrots mimic human speech? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-08-28 | Why do cuts itch when they heal? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-29 | Why do robots need sensors? | Technology | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-30 | Why do crackers have tiny holes? | Food | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-08-31 | Why did ancient cities build giant walls around themselves? | History | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-09-01 | Why can glass take over a million years to decompose? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-09-02 | Why do waterfalls never run out of water? | Earth | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-09-01 | Why does glass last so long? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-09-02 | Why do waterfalls keep flowing? | Earth | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-03 | Why do astronauts train underwater? | Space | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-04 | Why do sloths move so slowly? | Animals | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-09-05 | Why do babies have more bones than adults? | Human Body | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-09-05 | Why do babies have more separate bones than adults? | Human Body | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-09-06 | Why do websites use cookies? | Technology | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-07 | Why does salt make food taste better? | Food | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-08 | Why did people once write on animal skin? | History | ⭐⭐ Curious Wonder | Scheduled |
-| 2026-09-09 | Why can a single tree communicate with other trees? | Weird & Wonderful | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
+| 2026-09-09 | Can trees really communicate with each other? | Weird & Wonderful | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
 | 2026-09-10 | Why are there giant caves underground? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
-| 2026-09-11 | Why can't we see all the stars during the day? | Space | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-09-11 | Why can't we see the stars during the day? | Space | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-12 | Why do woodpeckers not get headaches? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 | 2026-09-13 | Why do we stretch when we're tired? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-09-14 | Why do computer passwords need to be so long? | Technology | ⭐⭐ Curious Wonder | Scheduled |

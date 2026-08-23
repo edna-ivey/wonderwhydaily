@@ -500,7 +500,9 @@ function validateSocial(): number {
 function readinessWindow(entries: BibleEntry[], wonders: WonderRecord[], today: string, days: number) {
   const end = addDays(today, days - 1);
   const scheduled = entries.filter((entry) => entry.date && entry.date >= today && entry.date <= end);
-  const completed = new Set(wonders.map((wonder) => normalizeTitle(String(wonder.data.title ?? ""))));
+  const completed = new Set(
+    wonders.map((wonder) => normalizeTitle(String(wonder.data.question ?? wonder.data.title ?? ""))),
+  );
   const missing = scheduled.filter((entry) => !completed.has(normalizeTitle(entry.title)));
   const ready = scheduled.length - missing.length;
   const percentage = scheduled.length === 0 ? 100 : Math.round((ready / scheduled.length) * 100);
@@ -539,7 +541,9 @@ function main() {
     .filter(
       (entry) =>
         !wonders.some(
-          (wonder) => normalizeTitle(String(wonder.data.title ?? "")) === normalizeTitle(entry.title),
+          (wonder) =>
+            normalizeTitle(String(wonder.data.question ?? wonder.data.title ?? "")) ===
+            normalizeTitle(entry.title),
         ),
     )
     .slice(0, 5);

@@ -143,6 +143,10 @@ Those systems remain deliberately unimplemented in Milestone 1.5.
 
 - Write guesses that sound reasonable; avoid trick answers.
 - Give every quiz exactly three plausible choices that reward careful thinking.
+- Make wrong answers actually wrong. A distractor is not valid merely because it
+  is not the preferred main answer; if it can genuinely contribute to the
+  phenomenon, rewrite the distractor or make the correct answer reflect the
+  multifactor reality.
 - Feedback should reward thinking, not test performance.
 - Write one flowing explanation narrative, usually 180-280 words and always
   within 150-320 words.
@@ -152,10 +156,42 @@ Those systems remain deliberately unimplemented in Milestone 1.5.
   children's educational host. Whenever possible, begin with an observation,
   situation, or question the reader recognizes, then invite them into the
   explanation.
+- Personality should feel effortless. Wonder Why Daily does not need to prove it
+  is funny.
+- The subject is the star. If the actual fact is strange, beautiful, gross,
+  enormous, ancient, counterintuitive, or unbelievable, let that create the
+  entertainment.
+- Question-reveal alignment matters. Before approving a Wonder, ask: if someone
+  read only the question and `correctAnswer`, would they feel that the question
+  had actually been answered? A "why" question should not quietly become only a
+  "how," "what," or "where" reveal unless that mechanism genuinely answers the
+  why.
+- Premise accuracy matters too. Before writing the Wonder, ask: is the premise
+  embedded in the question itself actually true? Do not put a shaky viral fact,
+  oversimplified claim, exception-heavy pattern, or misconception in the
+  question and then correct it only after the reader clicks. The Wonder should
+  begin from a defensible premise.
+- Core answer focus keeps Wonders from getting muddy. Before approving a
+  Wonder, ask: what is the single most important thing the reader needs to
+  understand to answer this exact question? The reveal should normally contain
+  that core answer. Secondary mechanisms, caveats, adjacent concepts, and
+  follow-up questions belong in the explanation or curiosity chain.
+- Mechanism and purpose are different kinds of answers. Before approving a
+  reveal, ask whether the question is really asking how something happens, why
+  it exists or happens, what caused it historically, what origin it has, or why
+  we perceive it a certain way. Do not answer a purpose question with only a
+  mechanism unless that mechanism genuinely resolves the "why."
+- Be witty without landing a joke every time. Fun does not always mean comedy;
+  a Wonder can leave the reader amazed, amused, creeped out, surprised,
+  delighted, humbled by scale, or fascinated by history.
 - Watch for repeated AI/template phrases across Wonders, including "which
   sounds impossible," "basically," "here's where it gets interesting," "and
   that's not all," and generic "tiny and boring" setups. These phrases are not
   banned individually, but recurring formulaic use should be revised.
+- Do not foreshadow the shape of the answer. A teaser can leak by saying the
+  answer is complicated, uncertain, counterintuitive, debated, not simple, or
+  multi-causal before the quiz. Ask whether the teaser tells the reader what
+  kind of answer to choose, not just whether it reveals a factual mechanism.
 - Include at least one sentence that remains fascinating even when the reader
   already knows the basic answer.
 - Keep Cool Fact independent from the explanation.

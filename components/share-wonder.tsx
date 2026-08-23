@@ -33,7 +33,7 @@ export function ShareWonder({
   return (
     <section className="share-wonder" aria-labelledby="share-wonder-heading">
       <div>
-        <p className="section-kicker">Pass the wonder along</p>
+        <p className="section-kicker">Know someone who would ask this?</p>
         <h2 id="share-wonder-heading">Share this question</h2>
       </div>
       <div className="share-links">

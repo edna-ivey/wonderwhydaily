@@ -43,14 +43,14 @@ export default function Home() {
       </section>
 
       <section className="wide-shell intro-strip" aria-labelledby="intro-heading">
-        <p className="section-kicker">Build a daily curiosity habit</p>
+        <p className="section-kicker">One good question a day</p>
         <div className="intro-message">
           <h2 id="intro-heading">
             The world gets more interesting when you stop to ask why.
           </h2>
           <p className="mission-copy">
-            Wonder Why Daily helps people build a daily curiosity habit through
-            one fascinating question every day.
+            Every day, start with a question, make a guess, and find out what
+            was hiding in plain sight.
           </p>
         </div>
         <div className="steps">

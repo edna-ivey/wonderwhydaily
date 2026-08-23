@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Wonder Why Daily",
   },
   description:
-    "Build a daily curiosity habit with one fascinating question every day.",
+    "One question a day that makes the world feel a little stranger and more interesting.",
   openGraph: {
     title: "Wonder Why Daily",
     description: "One fascinating question every day.",

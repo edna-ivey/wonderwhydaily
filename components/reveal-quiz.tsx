@@ -1,25 +1,31 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
+
+type RevealPayload = {
+  correct: boolean;
+  correctAnswer: string;
+  correctFeedback: string;
+  incorrectFeedback: string;
+  explanation: MDXRemoteSerializeResult;
+  wowFact: string;
+};
 
 export function RevealQuiz({
   children,
   choices,
-  correctAnswer,
-  correctFeedback,
-  incorrectFeedback,
-  shortAnswer,
+  slug,
 }: {
   children: ReactNode;
   choices: string[];
-  correctAnswer: string;
-  correctFeedback: string;
-  incorrectFeedback: string;
-  shortAnswer: string;
+  slug: string;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
-  const [revealed, setRevealed] = useState(false);
+  const [reveal, setReveal] = useState<RevealPayload | null>(null);
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const answerRef = useRef<HTMLDivElement>(null);
+  const revealed = reveal !== null;
 
   useEffect(() => {
     if (revealed) {
@@ -32,6 +38,31 @@ export function RevealQuiz({
     setSelected(answer);
   }
 
+  async function revealAnswer() {
+    if (!selected || status === "loading") return;
+
+    setStatus("loading");
+
+    try {
+      const response = await fetch(`/api/wonders/${slug}/reveal`, {
+        body: JSON.stringify({ selected }),
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+      });
+
+      if (!response.ok) {
+        throw new Error("Reveal request failed");
+      }
+
+      const data = (await response.json()) as RevealPayload;
+
+      setReveal(data);
+      setStatus("idle");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       <section className="quiz-panel" aria-labelledby="quiz-heading">
@@ -41,9 +72,9 @@ export function RevealQuiz({
         <div className="choice-list">
           {choices.map((choice) => {
             const isSelected = selected === choice;
-            const isCorrect = revealed && choice === correctAnswer;
+            const isCorrect = revealed && choice === reveal.correctAnswer;
             const isIncorrect =
-              revealed && isSelected && choice !== correctAnswer;
+              revealed && isSelected && choice !== reveal.correctAnswer;
 
             return (
               <button
@@ -63,31 +94,40 @@ export function RevealQuiz({
           })}
         </div>
         {!revealed ? (
-          <button
-            aria-controls="wonder-reveal-content"
-            aria-expanded="false"
-            className="button button-dark reveal-button"
-            disabled={!selected}
-            onClick={() => setRevealed(true)}
-            type="button"
-          >
-            Reveal the answer
-          </button>
+          <>
+            <button
+              aria-controls="wonder-reveal-content"
+              aria-expanded="false"
+              className="button button-dark reveal-button"
+              disabled={!selected || status === "loading"}
+              onClick={revealAnswer}
+              type="button"
+            >
+              {status === "loading" ? "Revealing…" : "Reveal the answer"}
+            </button>
+            {status === "error" ? (
+              <p className="reveal-error" role="alert">
+                Something went wrong loading the answer. Please try again.
+              </p>
+            ) : null}
+          </>
         ) : (
           <div
             className={`answer-reveal ${
-              selected === correctAnswer ? "answer-correct" : "answer-incorrect"
+              selected === reveal.correctAnswer ? "answer-correct" : "answer-incorrect"
             }`}
             ref={answerRef}
             tabIndex={-1}
           >
             <p className="answer-result">
-              {selected === correctAnswer ? "You got it" : "Not quite"}
+              {selected === reveal.correctAnswer ? "You got it" : "Not quite"}
             </p>
             <p className="answer-feedback">
-              {selected === correctAnswer ? correctFeedback : incorrectFeedback}
+              {selected === reveal.correctAnswer
+                ? reveal.correctFeedback
+                : reveal.incorrectFeedback}
             </p>
-            <p className="answer-copy">{shortAnswer}</p>
+            <p className="answer-copy">{reveal.correctAnswer}</p>
             <a className="text-link" href="#explanation">
               Read the why <span aria-hidden="true">↓</span>
             </a>
@@ -101,6 +141,17 @@ export function RevealQuiz({
           id="wonder-reveal-content"
           aria-label="Wonder answer and explanation"
         >
+          <article className="explanation" id="explanation">
+            <p className="section-kicker">The why</p>
+            <MDXRemote {...reveal.explanation} />
+          </article>
+
+          <aside className="wow-fact-card" aria-labelledby="wow-fact-heading">
+            <p className="section-kicker">WAIT... WHAT?</p>
+            <h2 id="wow-fact-heading">One more weird little door</h2>
+            <p>{reveal.wowFact}</p>
+          </aside>
+
           {children}
         </div>
       ) : null}

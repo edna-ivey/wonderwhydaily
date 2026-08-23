@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { RevealQuiz } from "@/components/reveal-quiz";
 import { ShareWonder } from "@/components/share-wonder";
 import { WonderArt } from "@/components/wonder-art";
@@ -16,6 +15,8 @@ import {
 export function WonderDetail({ wonder }: { wonder: Wonder }) {
   const related = getRelatedWonders(wonder);
   const curiosityChainTarget = getCuriosityChainTarget(wonder);
+  const curiosityChainQuestion =
+    curiosityChainTarget?.question ?? wonder.curiosityChain?.question;
   const wonderUrl = `https://wonderwhydaily.com/wonders/${wonder.slug}`;
 
   return (
@@ -42,31 +43,14 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
       </section>
 
       <div className="reading-shell wonder-main">
-        <RevealQuiz
-          choices={wonder.guessChoices}
-          correctAnswer={wonder.correctAnswer}
-          correctFeedback={wonder.correctFeedback}
-          incorrectFeedback={wonder.incorrectFeedback}
-          shortAnswer={wonder.correctAnswer}
-        >
-          <article className="explanation" id="explanation">
-            <p className="section-kicker">The why</p>
-            <MDXRemote source={wonder.explanation} />
-          </article>
-
-          <aside className="wow-fact-card" aria-labelledby="wow-fact-heading">
-            <p className="section-kicker">WAIT... WHAT?</p>
-            <h2 id="wow-fact-heading">One more weird little door</h2>
-            <p>{wonder.wowFact}</p>
-          </aside>
-
+        <RevealQuiz choices={wonder.guessChoices} slug={wonder.slug}>
           {wonder.curiosityChain ? (
             <section
               className="curiosity-chain"
               aria-labelledby="curiosity-chain-heading"
             >
               <p className="section-kicker">Now you&apos;re probably wondering...</p>
-              <h2 id="curiosity-chain-heading">{wonder.curiosityChain.question}</h2>
+              <h2 id="curiosity-chain-heading">{curiosityChainQuestion}</h2>
               {curiosityChainTarget ? (
                 <Link
                   className="button button-dark"
@@ -91,8 +75,7 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
               </Link>
             </div>
             <p className="related-intro">
-              Keep your curiosity going with another question chosen to surprise
-              you.
+              Pick another question and see where it leads.
             </p>
             <div className="card-grid related-grid">
               {related.map((relatedWonder) => (
