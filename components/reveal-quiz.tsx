@@ -15,10 +15,12 @@ type RevealPayload = {
 export function RevealQuiz({
   children,
   choices,
+  curiosityChain,
   slug,
 }: {
   children: ReactNode;
   choices: string[];
+  curiosityChain?: ReactNode;
   slug: string;
 }) {
   const [selected, setSelected] = useState<string | null>(null);
@@ -141,16 +143,22 @@ export function RevealQuiz({
           id="wonder-reveal-content"
           aria-label="Wonder answer and explanation"
         >
-          <article className="explanation" id="explanation">
-            <p className="section-kicker">The why</p>
-            <MDXRemote {...reveal.explanation} />
-          </article>
+          <div className="editorial-grid">
+            <article className="explanation" id="explanation">
+              <p className="section-kicker">The why</p>
+              <MDXRemote {...reveal.explanation} />
+            </article>
 
-          <aside className="wow-fact-card" aria-labelledby="wow-fact-heading">
-            <p className="section-kicker">WAIT... WHAT?</p>
-            <h2 id="wow-fact-heading">One more weird little door</h2>
-            <p>{reveal.wowFact}</p>
-          </aside>
+            <div className="editorial-sidebar">
+              <aside className="wow-fact-card" aria-labelledby="wow-fact-heading">
+                <p className="section-kicker">WAIT... WHAT?</p>
+                <h2 id="wow-fact-heading">One more weird little door</h2>
+                <p>{reveal.wowFact}</p>
+              </aside>
+
+              {curiosityChain}
+            </div>
+          </div>
 
           {children}
         </div>

@@ -13,7 +13,7 @@ import {
 } from "@/lib/wonders";
 
 export function WonderDetail({ wonder }: { wonder: Wonder }) {
-  const related = getRelatedWonders(wonder);
+  const related = getRelatedWonders(wonder).slice(0, 3);
   const curiosityChainTarget = getCuriosityChainTarget(wonder);
   const curiosityChainQuestion =
     curiosityChainTarget?.question ?? wonder.curiosityChain?.question;
@@ -42,26 +42,30 @@ export function WonderDetail({ wonder }: { wonder: Wonder }) {
         </div>
       </section>
 
-      <div className="reading-shell wonder-main">
-        <RevealQuiz choices={wonder.guessChoices} slug={wonder.slug}>
-          {wonder.curiosityChain ? (
-            <section
-              className="curiosity-chain"
-              aria-labelledby="curiosity-chain-heading"
-            >
-              <p className="section-kicker">Now you&apos;re probably wondering...</p>
-              <h2 id="curiosity-chain-heading">{curiosityChainQuestion}</h2>
-              {curiosityChainTarget ? (
-                <Link
-                  className="button button-dark"
-                  href={`/wonders/${curiosityChainTarget.slug}`}
-                >
-                  Follow that question <span aria-hidden="true">-&gt;</span>
-                </Link>
-              ) : null}
-            </section>
-          ) : null}
-
+      <div className="wonder-shell wonder-main">
+        <RevealQuiz
+          choices={wonder.guessChoices}
+          curiosityChain={
+            wonder.curiosityChain ? (
+              <section
+                className="curiosity-chain"
+                aria-labelledby="curiosity-chain-heading"
+              >
+                <p className="section-kicker">Now you&apos;re probably wondering...</p>
+                <h2 id="curiosity-chain-heading">{curiosityChainQuestion}</h2>
+                {curiosityChainTarget ? (
+                  <Link
+                    className="button button-dark"
+                    href={`/wonders/${curiosityChainTarget.slug}`}
+                  >
+                    Follow that question <span aria-hidden="true">-&gt;</span>
+                  </Link>
+                ) : null}
+              </section>
+            ) : null
+          }
+          slug={wonder.slug}
+        >
           <ShareWonder title={wonder.title} url={wonderUrl} />
 
           <section className="related-section" aria-labelledby="related-heading">
