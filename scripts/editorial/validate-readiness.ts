@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { categoryDefinitions, getEditorialDate, wonderRatings } from "../../lib/wonders.ts";
+import { categoryDefinitions, getEditorialDate, tryItTypes, wonderRatings } from "../../lib/wonders.ts";
 
 const root = process.cwd();
 const biblePath = path.join(root, "docs/WONDER_BIBLE.md");
@@ -12,6 +12,7 @@ const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 const validStatuses = new Set(["Published", "Scheduled", "Approved"]);
 const validCategories = new Set<string>(categoryDefinitions.map((category) => category.name));
 const validRatings = new Set<string>([...wonderRatings, "TBD"]);
+const validTryItTypes = new Set<string>(tryItTypes);
 
 type Severity = "error" | "warning";
 type Issue = { area: string; severity: Severity; message: string };
@@ -246,6 +247,20 @@ function validateWonderMetadata(wonders: WonderRecord[]) {
     }
     if (typeof rating === "string" && !validRatings.has(rating)) {
       report("Wonder metadata", "error", `${wonder.filename} has invalid rating "${rating}".`);
+    }
+    const tryIt = wonder.data.tryIt;
+    if (
+      typeof tryIt !== "object" ||
+      tryIt === null ||
+      Array.isArray(tryIt) ||
+      !validTryItTypes.has((tryIt as Record<string, unknown>).type as string) ||
+      !nonEmpty((tryIt as Record<string, unknown>).text)
+    ) {
+      report(
+        "Wonder metadata",
+        "error",
+        `${wonder.filename} is missing a canonical "tryIt" (type: home | wild | yourself, plus non-empty text). The legacy "tryItYourself" string does not satisfy this requirement.`,
+      );
     }
     if (
       !Array.isArray(choices) ||

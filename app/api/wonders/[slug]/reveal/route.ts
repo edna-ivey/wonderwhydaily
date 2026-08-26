@@ -39,5 +39,6 @@ export async function POST(request: Request, { params }: Props) {
     incorrectFeedback: wonder.incorrectFeedback,
     explanation,
     wowFact: wonder.wowFact,
+    ...(wonder.tryIt ? { tryIt: wonder.tryIt } : {}),
   });
 }

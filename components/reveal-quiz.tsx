@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote";
+import type { TryIt, TryItType } from "@/lib/wonders";
 
 type RevealPayload = {
   correct: boolean;
@@ -10,6 +11,13 @@ type RevealPayload = {
   incorrectFeedback: string;
   explanation: MDXRemoteSerializeResult;
   wowFact: string;
+  tryIt?: TryIt;
+};
+
+const tryItLabels: Record<TryItType, string> = {
+  home: "TRY IT AT HOME",
+  wild: "TRY IT IN THE WILD",
+  yourself: "TRY IT YOURSELF",
 };
 
 export function RevealQuiz({
@@ -155,6 +163,14 @@ export function RevealQuiz({
                 <h2 id="wow-fact-heading">One more weird little door</h2>
                 <p>{reveal.wowFact}</p>
               </aside>
+
+              {reveal.tryIt ? (
+                <aside className="try-it-card" aria-labelledby="try-it-heading">
+                  <p className="section-kicker">{tryItLabels[reveal.tryIt.type]}</p>
+                  <h2 id="try-it-heading">Give it a try</h2>
+                  <p>{reveal.tryIt.text}</p>
+                </aside>
+              ) : null}
 
               {curiosityChain}
             </div>

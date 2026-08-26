@@ -1176,7 +1176,8 @@ button {
 }
 
 .wow-fact-card,
-.curiosity-chain {
+.curiosity-chain,
+.try-it-card {
   margin: 0;
   overflow: hidden;
   padding: 28px;
@@ -1192,13 +1193,24 @@ button {
   padding: 34px 28px;
 }
 
+.try-it-card {
+  background: var(--blue);
+}
+
 .wow-fact-card .section-kicker,
-.curiosity-chain .section-kicker {
+.curiosity-chain .section-kicker,
+.try-it-card .section-kicker {
   color: var(--ink);
 }
 
+.try-it-card .section-kicker {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+}
+
 .wow-fact-card h2,
-.curiosity-chain h2 {
+.curiosity-chain h2,
+.try-it-card h2 {
   font-family: var(--font-display);
   font-size: 2.5rem;
   letter-spacing: -0.05em;
@@ -1207,7 +1219,8 @@ button {
   max-width: 300px;
 }
 
-.wow-fact-card > p:last-child {
+.wow-fact-card > p:last-child,
+.try-it-card > p:last-child {
   font-family: var(--font-display);
   font-size: 1.45rem;
   line-height: 1.7;

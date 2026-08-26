@@ -102,6 +102,15 @@ export type CuriosityChain = {
   relatedSlug?: string;
 };
 
+export const tryItTypes = ["home", "wild", "yourself"] as const;
+
+export type TryItType = (typeof tryItTypes)[number];
+
+export type TryIt = {
+  type: TryItType;
+  text: string;
+};
+
 export type Wonder = {
   slug: string;
   /**
@@ -114,6 +123,13 @@ export type Wonder = {
   correctAnswer: string;
   wowFact: string;
   curiosityChain?: CuriosityChain;
+  /**
+   * Present once a Wonder has been classified during the Try It restoration
+   * migration. Optional only while some of the 107 Wonders still rely on the
+   * legacy flat `tryItYourself` string below; the goal is for every Wonder to
+   * have one.
+   */
+  tryIt?: TryIt;
   explanation: string;
 
   /**
@@ -205,6 +221,30 @@ function parseCuriosityChain(
   };
 }
 
+function parseTryIt(value: unknown, filename: string): TryIt | undefined {
+  if (value === undefined || value === null) return undefined;
+
+  if (typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(
+      `${filename}: "tryIt" must be an object with a "type" and "text".`,
+    );
+  }
+
+  const tryIt = value as Record<string, unknown>;
+  const type = assertString(tryIt.type, "tryIt.type", filename);
+
+  if (!tryItTypes.includes(type as TryItType)) {
+    throw new Error(
+      `${filename}: "tryIt.type" must be one of ${tryItTypes.join(", ")}.`,
+    );
+  }
+
+  return {
+    type: type as TryItType,
+    text: assertString(tryIt.text, "tryIt.text", filename),
+  };
+}
+
 function normalizePreviewText(value: string): string {
   return value
     .toLocaleLowerCase()
@@ -268,6 +308,7 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
   const shortAnswer = assertString(data.shortAnswer ?? correctAnswer, "shortAnswer", filename);
   const wowFact = assertString(data.wowFact ?? data.coolFact, "wowFact", filename);
   const curiosityChain = parseCuriosityChain(data.curiosityChain, filename);
+  const tryIt = parseTryIt(data.tryIt, filename);
 
   if (!choices.includes(correctAnswer)) {
     throw new Error(`${filename}: "correctAnswer" must match one of the guess choices.`);
@@ -324,6 +365,7 @@ function parseFrontmatter(data: Record<string, unknown>, filename: string): Fron
     coolFact: wowFact,
     tryItYourself: assertString(data.tryItYourself, "tryItYourself", filename),
     ...(curiosityChain ? { curiosityChain } : {}),
+    ...(tryIt ? { tryIt } : {}),
     related: assertStringArray(data.related ?? [], "related", filename),
     accent: assertString(data.accent ?? categoryDefinition.accent, "accent", filename),
     takeaway: assertString(data.takeaway, "takeaway", filename),

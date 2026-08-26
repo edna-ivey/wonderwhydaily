@@ -54,7 +54,72 @@ and a conversational explanation body.
 | MDX body | One flowing, conversational explanation narrative |
 | `takeaway` | One memorable summary suitable for recaps and scripts |
 | `coolFact` | A surprising supporting fact |
-| `tryItYourself` | Safe observation or activity that connects learning to life |
+| `tryIt` | **Required.** A safe, real activity that lets the reader experience the Wonder — see "Try It" below |
+| `tryItYourself` | Legacy string alias for `tryIt.text`. Kept only for backward compatibility; do not author new content against this field |
+
+### Try It: a required permanent element
+
+Every Wonder must include a `tryIt` object. This is not optional — a Wonder is
+not canonical without one, regardless of whether the legacy `tryItYourself`
+string is present. Try It is what keeps Wonder Why Daily from being a site
+that only explains things: whenever it is genuinely possible, the reader
+should be able to observe, test, notice, compare, or safely experience the
+Wonder for themselves, not just read about it.
+
+Canonical schema:
+
+```yaml
+tryIt:
+  type: home | wild | yourself
+  text: >-
+    Short safe observation, experiment, or action.
+```
+
+There is no custom title field. The UI derives a fixed label from `type`:
+
+- **`home`** — a simple activity or experiment using ordinary household
+  items. Label: **TRY IT AT HOME**.
+- **`wild`** — noticing or testing the phenomenon somewhere in everyday life
+  or the outside world (weather, nature, a pet, technology in its normal
+  environment). Label: **TRY IT IN THE WILD**.
+- **`yourself`** — something the reader can observe or test directly with
+  their own perception, body, or device. Label: **TRY IT YOURSELF**.
+
+Editorial rules for `tryIt.text`:
+
+- Every Wonder gets one. Do not skip it because a natural activity is hard to
+  devise — find the closest genuine way to observe, test, notice, or compare
+  something related, even if it is a perceptual or reflective one rather than
+  a hands-on experiment.
+- It should let the reader observe, test, notice, compare, or safely
+  experience something related to the Wonder — not just repeat the
+  explanation in a different sentence.
+- Prefer real-world interaction over simply looking something up online when
+  a practical real-world alternative exists. Searching for a video or photo
+  is acceptable only when the phenomenon genuinely cannot be observed
+  firsthand (for example, a black hole, a snapping shrimp's flash, or a
+  volcanic eruption).
+- Activities must be safe and realistically doable by a curious reader of any
+  age reading unsupervised.
+- Do not require specialized equipment or purchases. Ordinary household
+  objects, a mirror, a phone the reader already owns, or things found
+  outdoors are fine.
+- Include adult-supervision language where appropriate (kitchen heat,
+  flames, anything a young reader should not do alone).
+- Body-related activities must be gentle, reversible, and include stop
+  language where appropriate ("stop if it feels uncomfortable" and similar).
+- Prefer an observation over an experiment when an experiment would be
+  unsafe or impractical (never invent a risky "test" for something like an
+  injury, illness, or hazardous natural event).
+- Never claim the activity "proves" the scientific explanation. It
+  demonstrates, illustrates, or lets the reader notice — it does not prove.
+- Do not unnecessarily reveal the answer or mechanism inside the
+  instruction. Try It should read as an invitation to notice or do
+  something, not as a second, smaller explanation. (Try It always renders
+  after the reveal, so this is about tone and redundancy, not about
+  spoiling the guess.)
+- Keep it concise and actionable — one or two sentences, a single clear
+  action plus what to notice.
 
 ### Future channel-ready metadata
 
@@ -95,6 +160,12 @@ The local content loader fails the build when:
 - A carousel has fewer than three ordered beats.
 - An explanation falls outside 150-320 words.
 - An explanation contains any heading or subsection.
+- `tryIt.type` is present but is not exactly `home`, `wild`, or `yourself`.
+
+Editorial QA (`npm run editorial:qa`) additionally requires every Wonder to
+have a canonical `tryIt` object (`type` one of `home`/`wild`/`yourself`, plus
+non-empty `text`). The legacy `tryItYourself` string alone does not satisfy
+this — a Wonder is not considered fully canonical without `tryIt`.
 
 Related slugs are validated as a hard build failure so intentional exploration
 paths cannot quietly break.
@@ -195,7 +266,9 @@ Those systems remain deliberately unimplemented in Milestone 1.5.
 - Include at least one sentence that remains fascinating even when the reader
   already knows the basic answer.
 - Keep Cool Fact independent from the explanation.
-- Keep Try It Yourself action-focused rather than explanatory.
+- Try It is required for every Wonder and must follow the rules in "Try It: a
+  required permanent element" above — action-focused, safe, and not a
+  restatement of the explanation.
 - Prefer short, lively paragraphs that are easy to read aloud.
 - Use vivid comparisons and direct language without sounding childish.
 - Avoid academic framing, generic editorial filler, and repeated formal prose.
