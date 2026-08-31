@@ -10,7 +10,7 @@ export function ShareWonder({
   url: string;
 }) {
   const [copied, setCopied] = useState(false);
-  const text = encodeURIComponent(`${title} — Wonder Why Daily`);
+  const text = encodeURIComponent(`${title} (Wonder Why Daily)`);
   const encodedUrl = encodeURIComponent(url);
 
   async function copyLink() {
