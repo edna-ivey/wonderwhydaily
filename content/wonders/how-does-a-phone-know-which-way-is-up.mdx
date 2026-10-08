@@ -1,0 +1,55 @@
+---
+question: "How does a phone know which way is up?"
+date: "2026-11-18"
+category: "Technology"
+rating: "⭐⭐ Curious Wonder"
+teaser: "Turn a phone sideways and the picture can rotate before you have finished moving your hand."
+guessChoices:
+  - "Motion sensors measure acceleration and rotation"
+  - "The camera watches the room's ceiling"
+  - "Satellites tell the screen which edge is highest"
+correctAnswer: "Motion sensors measure acceleration and rotation"
+correctFeedback: "Exactly. Accelerometers and gyroscopes give software clues about the phone's tilt and motion."
+incorrectFeedback: "A sensible guess, but tiny internal motion sensors, not the camera or satellites, guide screen orientation."
+wowFact: "An accelerometer at rest still measures gravity, so the phone can use Earth's downward pull as a built-in direction reference."
+tryItYourself: "Open a rotation-friendly app and turn the phone slowly while it lies nearly flat. Notice where orientation becomes harder to decide."
+tryIt:
+  type: "home"
+  text: "Open a rotation-friendly app and turn the phone slowly while it lies nearly flat. Notice where orientation becomes harder to decide."
+curiosityChain:
+  question: "How can a sensor distinguish tilting from speeding up?"
+  relatedSlug: "why-do-robots-need-sensors"
+related:
+  - "why-do-robots-need-sensors"
+  - "why-does-your-phone-know-where-you-are"
+  - "why-does-your-phone-get-hot"
+accent: "technology"
+takeaway: "Phones infer orientation by combining accelerometer and gyroscope measurements with software filtering."
+sources:
+  - title: "Motion Sensors"
+    url: "https://developer.android.com/develop/sensors-and-location/sensors/sensors_motion"
+  - title: "Core Motion"
+    url: "https://developer.apple.com/documentation/coremotion"
+channels:
+  email:
+    subject: "Today's Wonder: How does a phone know which way is up?"
+    preheader: "Your screen follows gravity using sensors smaller than a fingernail."
+    teaser: "Turn a phone sideways and the picture can rotate before you have finished moving your hand."
+  social:
+    hook: "Your screen follows gravity using sensors smaller than a fingernail."
+    carouselBeats:
+      - "How does a phone know which way is up?"
+      - "Exactly. Accelerometers and gyroscopes give software clues about the phone's tilt and motion."
+      - "Phones infer orientation by combining accelerometer and gyroscope measurements with software filtering."
+    shortVideoHook: "How does a phone know which way is up?"
+    shortVideoPayoff: "Exactly. Accelerometers and gyroscopes give software clues about the phone's tilt and motion."
+    pinterestTitle: "How does a phone know which way is up? | Wonder Why Daily"
+    pinterestDescription: "Your screen follows gravity using sensors smaller than a fingernail. Take a guess with Wonder Why Daily."
+---
+Inside a phone, a tiny accelerometer measures acceleration along several axes. Even while the phone sits still, gravity produces a steady reading that points downward. Software compares the components of that signal to estimate which edge is closest to the ground.
+
+A gyroscope adds information about rotation. It can sense how quickly the phone is turning, which helps the system respond smoothly and distinguish a deliberate change from a small shake. Devices often combine both sensors because each has weaknesses on its own.
+
+The measurements are noisy, and ordinary movement also creates acceleration. Software filters many readings over time, checks whether the new orientation is stable, and then tells an app whether the device is portrait or landscape. That short pause prevents the screen from flipping wildly with every bump.
+
+When a phone lies almost flat, gravity does not strongly favor one side edge, so orientation can be ambiguous. Rotation lock simply tells the interface to ignore automatic changes even though the sensors continue detecting movement for games, fitness tracking, camera stabilization, and other features.

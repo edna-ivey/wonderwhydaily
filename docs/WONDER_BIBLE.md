@@ -49,14 +49,14 @@ candidate titles are normalized to `Earth` in this Bible.
 | Status | Count |
 |---|---:|
 | Published | 13 |
-| Scheduled | 130 |
+| Scheduled | 205 |
 | Approved | 0 |
-| **Total** | **143** |
+| **Total** | **218** |
 
 As of the editorial date **June 10, 2026**, 13 Wonders are classified
-`Published`. All remaining 130 controlled Wonders now have publication dates
-and are classified `Scheduled`. Of those Scheduled Wonders, 57 are editorial
-plans that still require validated repository content before publication.
+`Published`. All remaining 205 controlled Wonders now have publication dates
+and are classified `Scheduled`. Validated repository content exists for every
+controlled Wonder.
 
 ## Published Wonders
 
@@ -210,57 +210,124 @@ plans that still require validated repository content before publication.
 | 2026-10-15 | Why do we shiver when we're cold? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-10-16 | Why do batteries eventually die forever? | Technology | ⭐⭐ Curious Wonder | Scheduled |
 | 2026-10-17 | Why do marshmallows puff up in the microwave? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-18 | Why did people carve messages into wet clay? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-19 | Why do geysers erupt again and again? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-20 | Why can owls turn their heads so far? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-21 | Why do airplane windows have tiny holes? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-22 | Why can you smell rain before it starts? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-23 | Why does your stomach growl even when you are not hungry? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-10-24 | Why do astronauts sometimes see flashes with their eyes closed? | Space | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
+| 2026-10-25 | Why did old maps include sea monsters? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-26 | Why do glaciers look blue? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-27 | Why do cats have whiskers? | Animals | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-10-28 | Why do microwave doors have dotted screens? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-29 | Why does a metal spoon feel colder than wood? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-10-30 | Why do we get pins and needles? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-10-31 | Why does the Moon sometimes turn red? | Space | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
+| 2026-11-01 | Why do leap years exist? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-02 | Why do squirrels bury nuts? | Animals | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-03 | Why do auroras glow in different colors? | Earth | ⭐⭐⭐⭐ Reality-Bending Wonder | Scheduled |
+| 2026-11-04 | How do noise-canceling headphones make sound quieter? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-05 | Why are soap bubbles round? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-06 | Why do bruises change color? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-07 | Why does Earth have seasons? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-08 | Why does Swiss cheese have holes? | Food | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-09 | Why do time zones exist? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-10 | Why don't spiders stick to their own webs? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-11 | Why do ocean waves break near shore? | Earth | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-12 | How does a printer make so many colors from only a few inks? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-13 | Why do we get static shocks? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-14 | Why do our ears pop on airplanes? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-15 | Why did old photographs take so long to make? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-16 | Why can birds sit safely on power lines? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-17 | Why do sinkholes suddenly open? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-18 | How does a phone know which way is up? | Technology | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-19 | Why do shadows change length during the day? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-20 | Why do pupils get bigger in the dark? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-21 | Why is Pluto called a dwarf planet? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-22 | Why does whipped cream become fluffy? | Food | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-23 | Why is Thanksgiving on the fourth Thursday of November? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-24 | How do reindeer stay warm in the Arctic? | Animals | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-25 | Why do rivers build deltas? | Earth | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-26 | Why are traffic lights red, yellow, and green? | Technology | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-27 | Why do paper cuts hurt so much? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-28 | Why do we have two nostrils? | Human Body | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-11-29 | Why do some coins have ridged edges? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-11-30 | Why does polar bear fur look white? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-01 | Why does ice float? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-02 | Why does GPS need such accurate clocks? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-03 | Why can we see our breath on cold days? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-04 | Why do our fingers feel clumsy in the cold? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-05 | Why do meteor showers return every year? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-06 | Why does sugar turn brown when heated? | Food | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-07 | Why do lighthouses have different flash patterns? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-08 | Why do snowshoe hares have such big feet? | Animals | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-09 | Why does frost form on clear nights? | Earth | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-10 | How can barcodes be read from different directions? | Technology | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-11 | Why does snow squeak underfoot? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-12 | Why do eyes look red in flash photos? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-13 | Why were postage stamps invented? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-14 | How can seals hold their breath so long? | Animals | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-15 | Why do caves grow stalactites? | Earth | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-16 | Why do LED lights use less electricity? | Technology | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-17 | Why do prisms make rainbows? | Weird & Wonderful | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-18 | Why does your nose run in cold air? | Human Body | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-19 | Why does the Moon have phases? | Space | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-20 | Why does bread crust turn brown? | Food | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-21 | Why have people celebrated the winter solstice for thousands of years? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-22 | Why do arctic foxes change color? | Animals | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-23 | Why is the earliest sunset not on the shortest day? | Earth | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-24 | How does NORAD track Santa? | Technology | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-25 | Why does tinsel sparkle so brightly? | Weird & Wonderful | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-26 | Why does salt keep ice cream cold? | Food | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-27 | Why is space so cold if the Sun is hot? | Space | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
+| 2026-12-28 | Why do people sing Auld Lang Syne at New Year? | History | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-29 | Why do oranges float before they are peeled? | Food | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-30 | Why do stars have different colors? | Space | ⭐⭐ Curious Wonder | Scheduled |
+| 2026-12-31 | Why does the new year begin on January 1? | History | ⭐⭐⭐ Mind-Blowing Wonder | Scheduled |
 
 ## Schedule Gaps
 
-The controlled schedule spans **May 28, 2026 through October 17, 2026** with no
+The controlled schedule spans **May 28, 2026 through December 31, 2026** with no
 missing calendar dates.
 
 ## Approved Wonder Candidate Pool
 
-No Approved candidates remain unscheduled. All 96 previously Approved
-candidates have recommended ratings and assigned publication dates in the
-Scheduled Wonders table.
+No Approved candidates remain unscheduled. Every controlled Wonder has a
+rating and assigned publication date in the Scheduled Wonders table.
 
 ## Category Counts
 
 | Category | Published | Scheduled | Approved | Total |
 |---|---:|---:|---:|---:|
-| Animals | 2 | 15 | 0 | 17 |
-| Earth | 2 | 15 | 0 | 17 |
-| Food | 0 | 22 | 0 | 22 |
-| History | 1 | 15 | 0 | 16 |
-| Human Body | 2 | 16 | 0 | 18 |
-| Space | 3 | 16 | 0 | 19 |
-| Technology | 2 | 15 | 0 | 17 |
-| Weird & Wonderful | 1 | 16 | 0 | 17 |
-| **Total** | **13** | **130** | **0** | **143** |
+| Animals | 2 | 25 | 0 | 27 |
+| Earth | 2 | 25 | 0 | 27 |
+| Food | 0 | 28 | 0 | 28 |
+| History | 1 | 27 | 0 | 28 |
+| Human Body | 2 | 25 | 0 | 27 |
+| Space | 3 | 24 | 0 | 27 |
+| Technology | 2 | 25 | 0 | 27 |
+| Weird & Wonderful | 1 | 26 | 0 | 27 |
+| **Total** | **13** | **205** | **0** | **218** |
 
 ## Integrity Review
 
-- Repository Wonders represented: 107 of 107.
-- Scheduled titles represented: 130 of 130.
+- Repository Wonders represented: 218 of 218.
+- Scheduled titles represented: 205 of 205.
 - Approved candidate titles remaining: 0.
 - Exact or normalized duplicate titles: 0.
 - Duplicate publication dates: 0.
-- The 96 newly Scheduled Wonders use only titles from the Approved candidate
-  pool and retain their permanent application categories.
+- Every Scheduled Wonder has matching validated repository content and retains
+  its permanent application category.
 - The newly Scheduled sequence has no consecutive category repeats, avoids
   repeating a category within three publication slots, and never exceeds three
   appearances of a category within a rolling 14-day window.
-- The controlled schedule spans May 28, 2026 through October 17, 2026 with no
+- The controlled schedule spans May 28, 2026 through December 31, 2026 with no
   unassigned dates.
-- Repository content now exists through the September 11, 2026 scheduled edition.
+- Repository content now exists through the December 31, 2026 scheduled edition.
 
 ## Current Editorial Concerns
 
-- The 36 Scheduled Wonders after September 11 require validated repository content
-  before their publication dates.
-- Ratings assigned to the newly Scheduled Wonders are editorial
-  recommendations and should be confirmed during content production.
-- Scheduling every remaining candidate continuously places the cold-weather
-  Wonders in the final October stretch. No seasonal candidates remain on hold;
-  true winter placement would require intentionally creating publication gaps.
-- Food has the largest lifetime category total because the controlled candidate
-  pool contains more Food Wonders than any other category. The schedule limits
-  Food to no more than three appearances in any rolling 14-day window.
+- No scheduled Wonder currently lacks validated repository content.
+- Food and History have the largest lifetime category totals at 28 each. Every
+  other permanent category has 27 Wonders.

@@ -1,0 +1,57 @@
+---
+question: "Why can computers generate random numbers?"
+date: "2026-09-30"
+category: "Technology"
+rating: "⭐⭐⭐ Mind-Blowing Wonder"
+teaser: "A machine that follows instructions exactly can still make results that are practically impossible to predict."
+guessChoices:
+  - "Algorithms expand a hidden seed into an unpredictable-looking sequence"
+  - "The processor briefly stops following mathematics"
+  - "Computers ask nearby devices to pick numbers for them"
+correctAnswer: "Algorithms expand a hidden seed into an unpredictable-looking sequence"
+correctFeedback: "Right. Most computer randomness is pseudorandom, generated deterministically from a seed that must be difficult to discover."
+incorrectFeedback: "Reasonable idea. Most software uses a deterministic algorithm whose output looks random when its internal state stays hidden."
+wowFact: "For high-stakes uses, computers gather entropy from physical events and can even use quantum measurements as a source of true randomness."
+tryItYourself: "Roll a die ten times and write the results. Then invent a rule that produces ten digits. Ask someone which list came from the die and discuss what fooled them."
+tryIt:
+  type: "home"
+  text: "Roll a die ten times and write the results. Then invent a rule that produces ten digits. Ask someone which list came from the die and discuss what fooled them."
+curiosityChain:
+  question: "If computers follow exact rules, why do they use binary?"
+  relatedSlug: "why-do-computers-use-binary"
+related:
+  - "why-do-computers-use-binary"
+  - "why-do-qr-codes-work-even-when-part-of-them-is-damaged"
+  - "why-do-robots-need-sensors"
+accent: "technology"
+takeaway: "Computers usually create pseudorandom sequences from algorithms and secret seeds, often fed by unpredictable physical events."
+sources:
+  - title: "Pseudorandom"
+    url: "https://csrc.nist.gov/glossary/term/pseudorandom"
+  - title: "NIST and Partners Use Quantum Mechanics to Make Random Numbers"
+    url: "https://www.nist.gov/news-events/news/2025/06/nist-and-partners-use-quantum-mechanics-make-factory-random-numbers"
+channels:
+  email:
+    subject: "Today's Wonder: Why can computers generate random numbers?"
+    preheader: "The numbers can look lawless even when an exact rule made them."
+    teaser: "A machine that follows instructions exactly can still make results that are practically impossible to predict."
+  social:
+    hook: "The numbers can look lawless even when an exact rule made them."
+    carouselBeats:
+      - "Why can computers generate random numbers?"
+      - "Right. Most computer randomness is pseudorandom, generated deterministically from a seed that must be difficult to discover."
+      - "Computers usually create pseudorandom sequences from algorithms and secret seeds, often fed by unpredictable physical events."
+    shortVideoHook: "Why can computers generate random numbers?"
+    shortVideoPayoff: "Right. Most computer randomness is pseudorandom, generated deterministically from a seed that must be difficult to discover."
+    pinterestTitle: "Why can computers generate random numbers? | Wonder Why Daily"
+    pinterestDescription: "The numbers can look lawless even when an exact rule made them. Take a guess with Wonder Why Daily."
+---
+Computers usually generate random-looking numbers by running a precise algorithm from a starting value called a seed, producing what scientists call pseudorandom numbers.
+
+A pseudorandom number generator is deterministic. If you know its algorithm and exact internal state, you can reproduce its sequence. But a well-designed generator spreads tiny changes in the seed through its output so thoroughly that the numbers pass statistical tests and are effectively unpredictable to someone who lacks that secret state.
+
+Where does the seed come from? Operating systems collect entropy from hard-to-predict physical timings and hardware events, such as fine variations in device activity. Some specialized generators measure electronic noise, radioactive events, or quantum behavior. Those real-world inputs help prevent the same sequence from appearing every time.
+
+Different jobs need different standards. A simple game may tolerate a fast generator that only looks varied. Encryption keys need a cryptographically secure generator designed so observing past output does not reveal future values. A poor generator or predictable seed can break an otherwise strong security system.
+
+Computers do not suspend logic to roll an imaginary die. They combine carefully tested mathematics with uncertainty gathered from the physical world, creating results that are useful precisely because outsiders cannot predict them.
